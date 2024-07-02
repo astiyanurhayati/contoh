@@ -56,7 +56,7 @@
         <div class="col-xl-5 col-md-6">
           <div class="single_work">
             <div class="work_thumb">
-              <img src="{{asset('asset-b/img/work/1.png')}}" alt="">
+              <img src="{{asset('portofolioimg/'.$portofolio[0]->image)}}" alt="{{$portofolio[0]->judul}}">
               <div class="work_hover">
                 <div class="work_inner">
                   <a href="#">View Details</a>
@@ -64,12 +64,12 @@
               </div>
             </div>
             <div class="work_heading">
-              <h3>Social App</h3>
+              <h3>{{$portofolio[0]->judul}}</h3>
             </div>
           </div>
           <div class="single_work">
             <div class="work_thumb">
-              <img src="{{asset('asset-b/img/work/3.png')}}" alt="">
+              <img src="{{asset('portofolioimg/'.$portofolio[1]->image)}}" alt="{{$portofolio[1]->judul}}">
               <div class="work_hover">
                 <div class="work_inner">
                   <a href="#">View Details</a>
@@ -77,14 +77,14 @@
               </div>
             </div>
             <div class="work_heading">
-              <h3>iOS Design System</h3>
+              <h3>{{$portofolio[1]->judul}}</h3>
             </div>
           </div>
         </div>
         <div class="col-xl-5 offset-xl-2 col-md-6">
           <div class="single_work spacec-top">
             <div class="work_thumb">
-              <img src="{{asset('asset-b/img/work/2.png')}}" alt="">
+              <img src="{{asset('portofolioimg/'.$portofolio[2]->image)}}" alt="{{$portofolio[2]->judul}}">
               <div class="work_hover">
                 <div class="work_inner">
                   <a href="#">View Details</a>
@@ -92,12 +92,12 @@
               </div>
             </div>
             <div class="work_heading">
-              <h3>Product Packaging</h3>
+              <h3>{{$portofolio[2]->judul}}</h3>
             </div>
           </div>
           <div class="single_work">
             <div class="work_thumb">
-              <img src="{{asset('asset-b/img/work/4.png')}}" alt="">
+              <img src="{{asset('portofolioimg/'.$portofolio[3]->image)}}" alt="{{$portofolio[3]->judul}}">
               <div class="work_hover">
                 <div class="work_inner">
                   <a href="#">View Details</a>
@@ -105,7 +105,7 @@
               </div>
             </div>
             <div class="work_heading">
-              <h3>Uber App Design</h3>
+              <h3>{{$portofolio[3]->judul}}</h3>
             </div>
           </div>
         </div>

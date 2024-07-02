@@ -74,7 +74,7 @@ class PageController extends Controller
     $feature = Feature::first();
     $recipe = Recipe::paginate(6);
     $testimonial = Testimonial::all();
-    $portofolio = Portofolio::paginate(8);
+    $portofolio = Portofolio::all();
     $template = Template::first();
     $subMenu = Submenu::all();
     $mainMenu = Mainmenu::all();

@@ -75,7 +75,7 @@
             <div class="col-xl-2 col-lg-2">
               <div class="logo-img">
                 <a href="index.html">
-                  <img src="{{asset('asset-b/img/logo.png')}}" alt="">
+                  <img src="{{asset('asset-b/img/utils/buatinaja.png')}}" alt="Buatinaja Logo" width="200px" style="margin-left: 20px">
                 </a>
               </div>
             </div>

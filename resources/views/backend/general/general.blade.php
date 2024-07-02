@@ -28,41 +28,25 @@
                 <input type="text" name="fb" class="form-control" value="{{$data->fb}}" fdprocessedid="bp6kma">
             </div>
             <div class="form-group col-md-4">
-                <label>Twetter</label>
-                <input type="text" name="tw" class="form-control" value="{{$data->tw}}" fdprocessedid="bp6kma">
-            </div>
-            <div class="form-group col-md-4">
                 <label>Intagram</label>
                 <input type="text" name="ig" class="form-control" value="{{$data->ig}}" fdprocessedid="bp6kma">
             </div>
-            <div class="form-group col-md-4">
-                <label>Youtube</label>
-                <input type="text" name="yt" class="form-control" value="{{$data->yt}}" fdprocessedid="bp6kma">
-            </div>
+           
             <div class="form-group col-md-4">
                 <label>Phone 1</label>
                 <input type="text" name="phone1" class="form-control" value="{{$data->phone1}}" fdprocessedid="bp6kma">
             </div>
-            <div class="form-group col-md-4">
-                <label>Phone 2</label>
-                <input type="text" name="phone2" class="form-control" value="{{$data->phone2}}" fdprocessedid="bp6kma">
-            </div>
+          
             <div class="form-group col-md-4">
                 <label>WhatsApp</label>
                 <input type="text" name="wa" class="form-control" value="{{$data->wa}}" fdprocessedid="bp6kma">
             </div>
             <div class="form-group col-md-4">
-                <label>Email 1</label>
+                <label>Email</label>
                 <input type="text" name="email1" class="form-control" value="{{$data->email1}}" fdprocessedid="bp6kma">
             </div>
-            <div class="form-group col-md-4">
-                <label>Email 2</label>
-                <input type="text" name="email2" class="form-control" value="{{$data->email2}}" fdprocessedid="bp6kma">
-            </div>
-            <div class="form-group col-md-6">
-                <label>Map</label>
-                <textarea name="map" class="form-control" id="" cols="2" rows="2">{{$data->map}}</textarea>
-            </div>
+            
+           
             <div class="form-group col-md-6">
                 <label>Alamat</label>
                 <textarea name="address" class="form-control" id="" cols="2" rows="2">{{$data->address}}</textarea>
@@ -141,49 +125,7 @@
                 </div>
                 @endif
             </div>
-            <div class="col-md-4">
-                <label for="">Logo 3</label>
-                <div class="input-group">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input @error('image') is-invalid @enderror" id="image" name="logo3" onchange="previewImage()">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                    </div>
-                    <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                    </div>
-                </div>
-                @if($data->logo3)
-                <div style="width: 100px">
-                    <img src="{{asset('generalimg/'.$data->logo3)}}" class="img-preview img-fluid d-blok">
-                </div>
-                @else
-                <div style="width: 150px">
-                    <img class="img-preview img-fluid">
-                </div>
-                @endif
-            </div>
-
-            <div class="col-md-4">
-                <label for="">breadcrumb</label>
-                <div class="input-group">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input @error('image') is-invalid @enderror" id="image" name="breadcrumb" onchange="previewImage()">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                    </div>
-                    <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                    </div>
-                </div>
-                @if($data->breadcrumb)
-                <div style="width: 100px">
-                    <img src="{{asset('generalimg/'.$data->breadcrumb)}}" class="img-preview img-fluid d-blok">
-                </div>
-                @else
-                <div style="width: 150px">
-                    <img class="img-preview img-fluid">
-                </div>
-                @endif
-            </div>
+           
         </div>
 
 
