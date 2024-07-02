@@ -1,0 +1,9 @@
+<script src="{{asset('js/jquery.js')}}"></script> 
+<script src="{{asset('js/popper.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.min.j')}}"></script>
+<script src="{{asset('js/jquery.fancybox.js')}}"></script>
+<script src="{{asset('js/owl.js')}}"></script>
+<script src="{{asset('js/wow.js')}}"></script>
+<script src="{{asset('js/select2.min.js')}}"></script>
+<script src="{{asset('js/appear.js')}}"></script>
+<script src="{{asset('js/script.js')}}"></script>
