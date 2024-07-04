@@ -319,56 +319,8 @@
 
 <h4> <b> Data </b></h4>
 <div class="row">
-    <div class="col-lg-3 col-6">
-        <!-- small card -->
-        <div class="small-box bg-info">
-            <div class="inner">
-                <h3>{{count($recipe)}}</h3>
-
-                <p>Recipes</p>
-            </div>
-            <div class="icon">
-                <i class="fas fa-shopping-cart"></i>
-            </div>
-            <a href="{{route('recipe.index')}}" class="small-box-footer">
-                More info <i class="fas fa-arrow-circle-right"></i>
-            </a>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small card -->
-        <div class="small-box bg-success">
-            <div class="inner">
-                <h3>{{count($special)}}</sup></h3>
-
-                <p>Specialities</p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="{{route('special.index')}}" class="small-box-footer">
-                More info <i class="fas fa-arrow-circle-right"></i>
-            </a>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small card -->
-        <div class="small-box bg-warning">
-            <div class="inner">
-                <h3>{{count($staff)}}</h3>
-
-                <p>Karyawan</p>
-            </div>
-            <div class="icon">
-                <i class="fas fa-user-plus"></i>
-            </div>
-            <a href="{{route('staff.index')}}" class="small-box-footer">
-                More info <i class="fas fa-arrow-circle-right"></i>
-            </a>
-        </div>
-    </div>
+ 
+    
     <!-- ./col -->
     <div class="col-lg-3 col-6">
         <!-- small card -->
@@ -392,22 +344,7 @@
 
 
 <div class="row">
-    <div class="col-lg-3 col-6">
-        <!-- small card -->
-        <div class="small-box bg-info">
-            <div class="inner">
-                <h3>{{count($price)}}</h3>
-
-                <p>Pricing</p>
-            </div>
-            <div class="icon">
-                <i class="fas fa-shopping-cart"></i>
-            </div>
-            <a href="{{route('price.index')}}" class="small-box-footer">
-                More info <i class="fas fa-arrow-circle-right"></i>
-            </a>
-        </div>
-    </div>
+  
     <!-- ./col -->
     <div class="col-lg-3 col-6">
         <!-- small card -->
@@ -425,23 +362,7 @@
             </a>
         </div>
     </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small card -->
-        <div class="small-box bg-warning">
-            <div class="inner">
-                <h3>{{count($shop)}}</h3>
-
-                <p>Produk/Shop</p>
-            </div>
-            <div class="icon">
-                <i class="fas fa-user-plus"></i>
-            </div>
-            <a href="{{route('shop.index')}}" class="small-box-footer">
-                More info <i class="fas fa-arrow-circle-right"></i>
-            </a>
-        </div>
-    </div>
+  
     <!-- ./col -->
     <div class="col-lg-3 col-6">
         <!-- small card -->
@@ -495,37 +416,7 @@
         </div>
     </div>
 
-    <div class="col-md-3 col-sm-6 col-12">
-        <div class="info-box">
-            <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Slide Recipe</span>
-                <span class="info-box-number">{{count($slideRecipe)}}</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-12">
-        <div class="info-box">
-            <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Kategori Produk</span>
-                <span class="info-box-number">{{count($categoryproduk)}}</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-3 col-sm-6 col-12">
-        <div class="info-box">
-            <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Kategori Produk</span>
-                <span class="info-box-number">{{count($slideRecipe)}}</span>
-            </div>
-        </div>
-    </div>
+   
     <div class="col-md-3 col-sm-6 col-12">
         <div class="info-box">
             <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>

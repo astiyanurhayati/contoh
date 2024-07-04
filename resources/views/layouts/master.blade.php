@@ -66,23 +66,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{route('special.index')}}" class="nav-link {{ Route::is('special.index') ? 'active' : ''}}">
-                                <p>
-                                    <i class="fas fa-wind nav-icon"></i>
-
-                                    Specialties
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('recipe.index')}}" class="nav-link {{ Route::is('recipe.index') ? 'active' : ''}}">
-                                <i class="fas fa-cookie-bite nav-icon"></i>
-                                <p>
-                                    Recipes
-                                </p>
-                            </a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a href="{{route('blog.index')}}" class="nav-link {{ Route::is('blog.index') ? 'active' : ''}}">
                                 <i class="nav-icon far fa-image"></i>
@@ -92,35 +76,14 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="{{route('price.index')}}" class="nav-link {{ Route::is('price.index') ? 'active' : ''}}">
-                                <i class="nav-icon far fa-image"></i>
-                                <p>
-                                    Pricing
-                                </p>
-                            </a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a href="{{route('portofolio.index')}}" class="nav-link {{ Route::is('portofolio.index') ? 'active' : ''}}">
                                 <i class="nav-icon fas fa-file"></i>
                                 <p>Portofolio</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{route('shop.index')}}" class="nav-link {{ Route::is('shop.index') ? 'active' : ''}}">
-                                <i class="fas fa-shopping-basket nav-icon"></i>
-                                <p>Produk Shop</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{route('staff.index')}}" class="nav-link open {{ Route::is('staff.index') ? 'active' : ''}}">
-                                <i class="nav-icon far fa-user"></i>
-                                <p>
-                                    Karyawan
-                                </p>
-                            </a>
-                        </li>
+                      
                         <li class="nav-item">
                             <a href="#" class="nav-link {{Request('dashboard/admin/master-data*')  ? "active" : ""}}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -130,12 +93,7 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{route('slidder.index')}}" class="nav-link {{ Route::is('slidder.index') ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Slidder</p>
-                                    </a>
-                                </li>
+                               
                                 <li class="nav-item">
                                     <a href="{{route('feature.index')}}" class="nav-link {{ Route::is('feature.index') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
@@ -161,32 +119,9 @@
                                         <p>Iklan Blog</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="{{route('slide-recipe.index')}}" class="nav-link {{ Route::is('slide-recipe.index') ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Slide Recipe</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('opening.index')}}" class="nav-link {{ Route::is('slide-recipe.index') ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Jam Buka</p>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{{route('category-produk.index')}}" class="nav-link {{ Route::is('category-produk.index') ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Kategori Produk</p>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{{route('category-recipe.index')}}" class="nav-link {{ Route::is('category-recipe.index') ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Kategori Resep</p>
-                                    </a>
-                                </li>
+                               
+                            
+                             
                                 <li class="nav-item">
                                     <a href="{{route('category-porto.index')}}" class="nav-link {{ Route::is('category-porto.index') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
@@ -269,18 +204,8 @@
                                         <p>About</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="{{route('page-staff.index')}}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Staff</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/mailbox/read-mail.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Read</p>
-                                    </a>
-                                </li>
+                            
+                                
                             </ul>
                         </li>
                         <li class="nav-item">
