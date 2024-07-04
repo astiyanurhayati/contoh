@@ -36,20 +36,20 @@
           @foreach ($blogs as $blog )
           <article class="blog_item">
             <div class="blog_item_img">
-              <img class="card-img rounded-0" src="" alt="">
+              <img class="card-img rounded-0" src="{{$blog->gambar}}" alt="{{$blog->judul}}">
               <a href="#" class="blog_item_date">
                 <h3>{{$blog->created_at->format('d')}}</h3>
-                <p>Jan</p>
+                <p>{{$blog->created_at->format('F')}}</p>
               </a>
             </div>
 
             <div class="blog_details">
-              <a class="d-inline-block" href="single-blog.html">
+              <a class="d-inline-block" href="{{route('detail.blog', $blog->slug)}}">
                 <h2>{{$blog->judul}}</h2>
               </a>
               <p>{{$blog->excerpt}}</p>
               <ul class="blog-info-link">
-                <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                <li><a href="#"><i class="fa fa-user"></i>categir</a></li>
                 <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
               </ul>
             </div>

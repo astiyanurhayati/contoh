@@ -15,10 +15,10 @@
   </div>
   <div class="animated_shape">
       <div class="anim_1">
-          <img src="img/about/1.png" alt="">
+          <img src="{{asset('asset-b/img/about/1.png')}}" alt="">
       </div>
       <div class="anim_2">
-          <img src="img/about/2.png" alt="">
+          <img src="{{asset('asset-b/img/about/2.png')}}" alt="">
       </div>
   </div>
 </div>
@@ -47,22 +47,22 @@
                   <div class="col-xl-12">
                       <div class="brand_active owl-carousel">
                           <div class="single_brand">
-                              <img src="img/brand/1.png" alt="">
+                              <img src="{{asset('asset-b/img/brand/1.png')}}" alt="">
                           </div>
                           <div class="single_brand">
-                              <img src="img/brand/2.png" alt="">
+                              <img src="{{asset('asset-b/img/brand/2.png')}}" alt="">
                           </div>
                           <div class="single_brand">
-                              <img src="img/brand/3.png" alt="">
+                              <img src="{{asset('asset-b/img/brand/3.png')}}" alt="">
                           </div>
                           <div class="single_brand">
-                              <img src="img/brand/4.png" alt="">
+                              <img src="{{asset('asset-b/img/brand/4.png')}}" alt="">
                           </div>
                           <div class="single_brand">
-                              <img src="img/brand/5.png" alt="">
+                              <img src="{{asset('asset-b/img/brand/5.png')}}" alt="">
                           </div>
                           <div class="single_brand">
-                              <img src="img/brand/6.png" alt="">
+                              <img src="{{asset('asset-b/img/brand/6.png')}}" alt="">
                           </div>
                       </div>
                   </div>
@@ -76,18 +76,16 @@
       <div class="row align-items-center">
           <div class="col-xl-6 col-md-6">
               <div class="build_img">
-                  <img src="img/brand/band_big.png" alt="">
+                  <img src="{{asset('asset-b/img/brand/band_big.png')}}" alt="">
               </div>
           </div>
           <div class="col-xl-5 offset-xl-1 col-md-6">
               <div class="product_right">
                   <div class="section_title">
-                      <h3>We Help you to Build
-                          your Product and Brand
-                          For Big or Small</h3>
+                      <h3>Kami Membantu Membangun Produk Digital Impian Anda!</h3>
                   </div>
-                  <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our let god. moving. Moving in fourth air night bring upon you’re it beast let you dominion likeness.</p>
-                  <a href="#" class="underline_text">Visit Our Profile</a>
+                  <p>Tim kami terdiri dari anak-muda yang bersemangat untuk memajukan teknologi indonesia dan akan memberikan layanan terbaik untuk anda</p>
+                  <a href="#" class="underline_text">Lihat Lebih Lanjut</a>
               </div>
               
           </div>
@@ -129,7 +127,7 @@
 <!-- instragram_area_start -->
 <div class="instragram_area">
       <div class="single_instagram">
-          <img src="img/instragram/1.png" alt="">
+          <img src="{{asset('asset-b/img/instragram/1.png')}}" alt="">
           <div class="ovrelay">
               <a href="#">
                   <i class="fa fa-instagram"></i>
@@ -137,7 +135,7 @@
           </div>
       </div>
       <div class="single_instagram">
-          <img src="img/instragram/2.png" alt="">
+          <img src="{{asset('asset-b/img/instragram/2.png')}}" alt="">
           <div class="ovrelay">
               <a href="#">
                   <i class="fa fa-instagram"></i>
@@ -145,7 +143,7 @@
           </div>
       </div>
       <div class="single_instagram">
-          <img src="img/instragram/3.png" alt="">
+          <img src="{{asset('asset-b/img/instragram/3.png')}}" alt="">
           <div class="ovrelay">
               <a href="#">
                   <i class="fa fa-instagram"></i>
@@ -153,7 +151,7 @@
           </div>
       </div>
       <div class="single_instagram">
-          <img src="img/instragram/4.png" alt="">
+          <img src="{{asset('asset-b/img/instragram/4.png')}}" alt="">
           <div class="ovrelay">
               <a href="#">
                   <i class="fa fa-instagram"></i>
@@ -161,7 +159,7 @@
           </div>
       </div>
       <div class="single_instagram">
-          <img src="img/instragram/5.png" alt="">
+          <img src="{{asset('asset-b/img/instragram/5.png')}}" alt="">
           <div class="ovrelay">
               <a href="#">
                   <i class="fa fa-instagram"></i>

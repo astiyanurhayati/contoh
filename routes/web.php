@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\About;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LikeController;
@@ -49,12 +48,7 @@ Route::get('/price', [PageController::class, 'price'])->name('price');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::post('/contact/post', [FormcontactController::class, 'store'])->name('form.store');
 Route::get('/reload-captcha', [CapchaController::class, 'reloadCaptcha']);
-Route::get('recipe', [PageController::class, 'recipe'])->name('recipe');
-Route::get('recipe/{slug}', [PageController::class, 'detailRecipe'])->name('detail.recipe');
-Route::get('portofolio/{slug}', [PageController::class, 'detailPortofolio'])->name('detail.portofolio');
 Route::get('portofolio', [PageController::class, 'portofolio'])->name('portofolio');
-Route::post('/recipes/{recipeId}/lidke', [LikeController::class, 'like'])->name('recipes.like');
-Route::post('/recipes/{recipeId}/unlike', [LikeController::class, 'unlike'])->name('recipes.unlike');
 Route::middleware('isLogin')->group(function () {
     Route::prefix('dashboard/admin/')->group(function () {
         Route::get('contact-user', [FormcontactController::class, 'index'])->name('form.contact');
@@ -65,7 +59,6 @@ Route::middleware('isLogin')->group(function () {
             Route::get('feature/item', [FeatureController::class, 'index'])->name('feature.index');
             Route::patch('feature/update/item', [FeatureController::class, 'update'])->name('feature.update');
             Route::resource('testimonial', TestimonialController::class);
-            Route::post('recipe-cek', [CkeditorController::class, 'ckeditorUpload'])->name('ckeditor');
             Route::get('search/testimonial', [TestimonialController::class, 'search'])->name('search.testimonial');
             Route::resource('category-porto', CategoryportoController::class);
             Route::get('search/categoryporto', [CategoryportoController::class, 'search'])->name('search.categoryporto');

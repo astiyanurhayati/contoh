@@ -4,20 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\About;
-use App\Models\Price;
 use App\Models\Gelery;
-use App\Models\Recipe;
 use App\Models\Feature;
 use App\Models\General;
 use App\Models\Opening;
 use App\Models\Slidder;
-use App\Models\Special;
 use App\Models\Submenu;
 use App\Models\Visitor;
 use App\Models\Mainmenu;
 use App\Models\Template;
 use App\Models\Portofolio;
-use App\Models\Sliderecipe;
 use App\Models\Testimonial;
 use App\Models\Categoryblog;
 use Illuminate\Http\Request;
@@ -32,7 +28,6 @@ class PageController extends Controller
 
   public function admin()
   {
-    $slidder = Slidder::all();
     $testimonial = Testimonial::all();
     $galeri = Gelery::all();
     
@@ -52,13 +47,12 @@ class PageController extends Controller
     $visitMonth = Visitor::whereBetween('created_at', [$startDate, $endDate])->get();
 
 
-    return view('backend.dahboard', compact('contactMessage',  'visitMonth', 'visitDay', 'visitor','blog', 'categoryporto','categoryblog', 'slidder', 'testimonial', 'galeri', 'portofolio'));
+    return view('backend.dahboard', compact('contactMessage',  'visitMonth', 'visitDay', 'visitor','blog', 'categoryporto','categoryblog', 'testimonial', 'galeri', 'portofolio'));
   }
   public function index()
   {
 
     $general = General::first();
-    $slidder = Slidder::all();
     $feature = Feature::first();
  
     $testimonial = Testimonial::all();
@@ -82,7 +76,7 @@ class PageController extends Controller
       ]);
     }
 
-    return view('frontend.index-b', compact('categoryblog', 'categoryporto', 'mainMenu', 'template', 'portofolio', 'slidder',  'feature','testimonial', 'subMenu', 'general'));
+    return view('frontend.index-b', compact('categoryblog', 'categoryporto', 'mainMenu', 'template', 'portofolio', 'feature','testimonial', 'subMenu', 'general'));
   }
 
   public function about()
@@ -172,7 +166,7 @@ class PageController extends Controller
   {
     $template = Template::first();
     $categoryblog  = Categoryblog::all();
-    $blogs = Blog::paginate(5);
+    $blogs = Blog::with('categoryblog')->paginate(5);
     $mainMenu = Mainmenu::all();
     $general = General::first();
     $iklanblogs = Iklan::latest()->get();
@@ -208,7 +202,7 @@ class PageController extends Controller
     $subMenu = Submenu::all();
     $iklanblogs = Iklan::latest()->get();
 
-    return view('frontend.detailBlog', compact('subMenu', 'iklanblogs', 'general', 'categoryblog', 'categoryporto','mainMenu', 'categoryblog', 'template', 'data', 'galery'));
+    return view('frontend.detail-blog-b', compact('subMenu', 'iklanblogs', 'general', 'categoryblog', 'categoryporto','mainMenu', 'categoryblog', 'template', 'data', 'galery'));
   }
 
   public function blogSearch(Request $request)

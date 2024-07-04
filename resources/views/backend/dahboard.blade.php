@@ -385,16 +385,7 @@
 
 <h4><b>Items</b></h4>
 <div class="row">
-    <div class="col-md-3 col-sm-6 col-12">
-        <div class="info-box">
-            <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Slidder</span>
-                <span class="info-box-number">{{count($slidder)}}</span>
-            </div>
-        </div>
-    </div>
+    
     <div class="col-md-3 col-sm-6 col-12">
         <div class="info-box">
             <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>

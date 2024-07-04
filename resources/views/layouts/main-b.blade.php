@@ -75,7 +75,7 @@
             <div class="col-xl-2 col-lg-2">
               <div class="logo-img">
                 <a href="index.html">
-                  <img src="{{asset('asset-b/img/utils/buatinaja.png')}}" alt="Buatinaja Logo" width="200px" style="margin-left: 20px">
+                  <img src="{{asset('asset-b/img/utils/buatinaja.png')}}" alt="Buatinaja Logo" width="150px" style="margin-left: 20px">
                 </a>
               </div>
             </div>
@@ -94,7 +94,7 @@
             </div>
             <div class="col-xl-3 col-lg-3 d-none d-lg-block">
               <div class="log_chat_area d-flex align-items-center">
-                <a href="{{route('portofolio')}}" target="_black" class="say_hi">Say Hi</a>
+                <a href="{{route('portofolio')}}" target="_black" class="say_hi">Konsultasi Sekarang!</a>
               </div>
             </div>
             <div class="col-12">

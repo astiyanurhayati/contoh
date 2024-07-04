@@ -7,9 +7,9 @@
       <div class="row">
         <div class="col-xl-12">
           <div class="agency_text">
-            <h3>We are <span>Design and Development</span> <br>
-              Agency based on California</h3>
-            <a href="{{route('portofolio')}}" target="_blank" class="underline_text">Brows Our Products</a>
+            <h3>Jasa Pembuatan <span>UI/UX Design & Website</span><br>
+               Konsultasi Gratis Sekarang!</h3>
+            <a href="{{route('portofolio')}}" target="_blank" class="underline_text">Lihat Lebih Lanjut</a>
           </div>
         </div>
       </div>
@@ -129,30 +129,19 @@
         <div class="col-xl-12">
           <div class="section_title white-color">
             <h3>
-              We’re a full-service Product Design and <br> Development agency, We build digital <br> products and brands
+              Kami Menyediakan Layanan Pembuatan <br> Product Digital Impian Anda<br>  
             </h3>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xl-4 col-md-6">
-          <div class="single_service text-center">
-            <div class="icon">
-              <img src="{{asset('asset-b/img/service/1.png')}}" alt="">
-            </div>
-            <h3>UX Research</h3>
-            <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our let god
-            </p>
-          </div>
-        </div>
+      <div class="row d-flex justify-content-center">
         <div class="col-xl-4 col-md-6">
           <div class="single_service text-center">
             <div class="icon">
               <img src="{{asset('asset-b/img/service/2.png')}}" alt="">
             </div>
-            <h3>UI Design</h3>
-            <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our let god
-            </p>
+            <h3>UI/UX <br> Design</h3>
+            <p>Desain profesional, menarik, kreatif, dan responsif yang mencerminkan kualitas dan profesionalisme bisnis Anda.</p>
           </div>
         </div>
         <div class="col-xl-4 col-md-6">
@@ -160,9 +149,8 @@
             <div class="icon">
               <img src="{{asset('asset-b/img/service/3.png')}}" alt="">
             </div>
-            <h3>Development</h3>
-            <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our let god
-            </p>
+            <h3>Website Development</h3>
+            <p>Merancang website yang sesuai dengan kebutuhan untuk berbagai macam bidang usaha Anda.</p>
           </div>
         </div>
       </div>
@@ -175,22 +163,46 @@
           <div class="col-xl-12">
             <div class="brand_active owl-carousel">
               <div class="single_brand">
-                <img src="{{asset('asset-b/img/brand/1.png')}}" alt="">
+                <img src="{{asset('asset-b/img/brand/HTML.png')}}" alt="">
               </div>
               <div class="single_brand">
-                <img src="{{asset('asset-b/img/brand/2.png')}}" alt="">
+                <img src="{{asset('asset-b/img/brand/CSS.png')}}" alt="">
               </div>
               <div class="single_brand">
-                <img src="{{asset('asset-b/img/brand/3.png')}}" alt="">
+                <img src="{{asset('asset-b/img/brand/BOOTSTRAP.png')}}" alt="">
               </div>
               <div class="single_brand">
-                <img src="{{asset('asset-b/img/brand/4.png')}}" alt="">
+                <img src="{{asset('asset-b/img/brand/TAILWIND.png')}}" alt="">
               </div>
               <div class="single_brand">
-                <img src="{{asset('asset-b/img/brand/5.png')}}" alt="">
+                <img src="{{asset('asset-b/img/brand/PHP.png')}}" alt="">
               </div>
               <div class="single_brand">
-                <img src="{{asset('asset-b/img/brand/6.png')}}" alt="">
+                <img src="{{asset('asset-b/img/brand/LARAVEL.png')}}" alt="">
+              </div>
+              <div class="single_brand">
+                <img src="{{asset('asset-b/img/brand/CODEIGNITER.png')}}" alt="">
+              </div>
+              <div class="single_brand">
+                <img src="{{asset('asset-b/img/brand/JAVASCRIPT.png')}}" alt="">
+              </div>
+              <div class="single_brand">
+                <img src="{{asset('asset-b/img/brand/REACT.png')}}" alt="">
+              </div>
+              <div class="single_brand">
+                <img src="{{asset('asset-b/img/brand/NEXTJS.png')}}" alt="">
+              </div>
+              <div class="single_brand">
+                <img src="{{asset('asset-b/img/brand/VUEJS.png')}}" alt="">
+              </div>
+              <div class="single_brand">
+                <img src="{{asset('asset-b/img/brand/FLUTTER.png')}}" alt="">
+              </div>
+              <div class="single_brand">
+                <img src="{{asset('asset-b/img/brand/MYSQL.png')}}" alt="">
+              </div>
+              <div class="single_brand">
+                <img src="{{asset('asset-b/img/brand/POSTGRESQL.png')}}" alt="">
               </div>
             </div>
           </div>
@@ -217,7 +229,7 @@
                 your Product and Brand
                 For Big or Small</h3>
             </div>
-            <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our let god. moving. Moving in fourth air night bring upon you’re it beast let you dominion likeness.</p>
+            <p>Tim kami terdiri dari anak-muda yang bersemangat untuk memajukan teknologi indonesia dan akan memberikan layanan yang terbaik untuk anda</p>
             <a href="#" class="underline_text">Visit Our Profile</a>
           </div>
 
@@ -302,6 +314,6 @@
   </div>
   <!-- instragram_area_end -->
   <div class="Visit_Work text-center">
-    <a href="#" class="Visit_link">Visit Our Work</a>
+    <a href="#" class="Visit_link">Lihat Apa Yang Telah Kami Kerjakan</a>
   </div>
 @endsection
