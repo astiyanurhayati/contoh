@@ -175,7 +175,7 @@
                 <img src="{{asset('asset-b/img/brand/TAILWIND.png')}}" alt="">
               </div>
               <div class="single_brand">
-                <img src="{{asset('asset-b/img/brand/PHP.png')}}" alt="">
+                <img src="{{asset('asset-b/img/brand/PHP.png')}}" alt="" class=" text-center">
               </div>
               <div class="single_brand">
                 <img src="{{asset('asset-b/img/brand/LARAVEL.png')}}" alt="">
@@ -225,12 +225,10 @@
         <div class="col-xl-5 offset-xl-1 col-md-6">
           <div class="product_right">
             <div class="section_title">
-              <h3>We Help you to Build
-                your Product and Brand
-                For Big or Small</h3>
+              <h3>Kami Membantu Membangun Produk Digital Impian Anda!</h3>
             </div>
             <p>Tim kami terdiri dari anak-muda yang bersemangat untuk memajukan teknologi indonesia dan akan memberikan layanan yang terbaik untuk anda</p>
-            <a href="#" class="underline_text">Visit Our Profile</a>
+            <a href="#" class="underline_text">Lihat Lebih Lanjut</a>
           </div>
 
         </div>
