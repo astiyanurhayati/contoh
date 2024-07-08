@@ -94,13 +94,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                
-                                <li class="nav-item">
-                                    <a href="{{route('feature.index')}}" class="nav-link {{ Route::is('feature.index') ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Feature</p>
-                                    </a>
-                                </li>
-
+                           
                                 <li class="nav-item">
                                     <a href="{{route('testimonial.index')}}" class="nav-link {{ Route::is('testimonial.index') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
@@ -120,8 +114,6 @@
                                     </a>
                                 </li>
                                
-                            
-                             
                                 <li class="nav-item">
                                     <a href="{{route('category-porto.index')}}" class="nav-link {{ Route::is('category-porto.index') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
@@ -177,43 +169,12 @@
                                         <p>Main Menu</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="{{route('sub-menu.index')}}" class="nav-link {{ Route::is('sub-menu.index') ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Sub Menu</p>
-                                    </a>
-                                </li>
-
+                    
 
                             </ul>
                         </li>
                         <li class="nav-header"></li>
 
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-envelope"></i>
-                                <p>
-                                    Halaman
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{route('about.index')}}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>About</p>
-                                    </a>
-                                </li>
-                            
-                                
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('form.contact')}}" class="nav-link {{ Route::is('category-porto.index') ? 'active' : '' }}">
-                                <i class="fas fa-comments nav-icon"></i>
-                                <p>Contact Message</p>
-                            </a>
-                        </li>
                         <li class="nav-item">
                             <a href="{{route('logout')}}" class="nav-link">
                                 <i class="fas fa-sign-out-alt nav-icon text-danger"></i>

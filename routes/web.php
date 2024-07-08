@@ -2,9 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\LikeController;
 use App\Http\Controllers\PageController;
-use App\Http\Controllers\AboutController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CapchaController;
 use App\Http\Controllers\GeleryController;
@@ -16,7 +14,6 @@ use App\Http\Controllers\SubmenuController;
 use App\Http\Controllers\MainmenuController;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\PortofolioController;
-use App\Http\Controllers\FormcontactController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\CategoryblogController;
 use App\Http\Controllers\CategoryportoController;
@@ -44,18 +41,12 @@ Route::get('/blog/category/{category}', [PageController::class, 'filterBlog'])->
 Route::get('/search/blog', [PageController::class, 'blogSearch'])->name('blog.search');
 Route::get('/price', [PageController::class, 'price'])->name('price');
 
-Route::post('/contact/post', [FormcontactController::class, 'store'])->name('form.store');
 Route::get('/reload-captcha', [CapchaController::class, 'reloadCaptcha']);
 Route::get('portofolio', [PageController::class, 'portofolio'])->name('portofolio');
 Route::middleware('isLogin')->group(function () {
     Route::prefix('dashboard/admin/')->group(function () {
-        Route::get('contact-user', [FormcontactController::class, 'index'])->name('form.contact');
-        Route::delete('contat-user/destroy/{id}', [FormcontactController::class, 'destroy'])->name('formContact.destroy');
         Route::get('/', [PageController::class, 'admin'])->name('dashboard');
         Route::prefix('master-data/')->group(function () {
-            Route::resource('slidder', SlidderController::class);
-            Route::get('feature/item', [FeatureController::class, 'index'])->name('feature.index');
-            Route::patch('feature/update/item', [FeatureController::class, 'update'])->name('feature.update');
             Route::resource('testimonial', TestimonialController::class);
             Route::get('search/testimonial', [TestimonialController::class, 'search'])->name('search.testimonial');
             Route::resource('category-porto', CategoryportoController::class);
@@ -63,7 +54,6 @@ Route::middleware('isLogin')->group(function () {
             Route::resource('category-blog', CategoryblogController::class);
             Route::get('search/category-blog', [CategoryblogController::class, 'search'])->name('search.categroyblog');
             Route::resource('galery', GeleryController::class);
-            Route::resource('opening', OpeningController::class);
             Route::resource('/iklan', IklanController::class);
         });
        
@@ -72,10 +62,7 @@ Route::middleware('isLogin')->group(function () {
         Route::prefix('manajemen-menu/')->group(function () {
             Route::resource('main-menu', MainmenuController::class);
             Route::resource('sub-menu', SubmenuController::class);
-            Route::prefix('halaman')->group(function () {
-                Route::get('/about', [AboutController::class, 'index'])->name('about.index');
-                Route::patch('/about/update', [AboutController::class, 'update'])->name('about.update');
-            });
+          
         });
         Route::prefix('konfigurasi/')->group(function () {
             Route::get('template', [TemplateController::class, 'index'])->name('template.index');

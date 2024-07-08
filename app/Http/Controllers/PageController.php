@@ -35,7 +35,6 @@ class PageController extends Controller
 
     $portofolio = Portofolio::all();
     
-    $contactMessage = Formcontact::all();
     $blog = Blog::all();
 
     $visitor = Visitor::all();
@@ -46,13 +45,12 @@ class PageController extends Controller
     $visitMonth = Visitor::whereBetween('created_at', [$startDate, $endDate])->get();
 
 
-    return view('backend.dahboard', compact('contactMessage',  'visitMonth', 'visitDay', 'visitor','blog', 'categoryporto','categoryblog', 'testimonial', 'galeri', 'portofolio'));
+    return view('backend.dahboard', compact(  'visitMonth', 'visitDay', 'visitor','blog', 'categoryporto','categoryblog', 'testimonial', 'galeri', 'portofolio'));
   }
   public function index()
   {
 
     $general = General::first();
-    $feature = Feature::first();
  
     $testimonial = Testimonial::all();
     $portofolio = Portofolio::all();
@@ -75,20 +73,19 @@ class PageController extends Controller
       ]);
     }
 
-    return view('frontend.index-b', compact('categoryblog', 'categoryporto', 'mainMenu', 'template', 'portofolio', 'feature','testimonial', 'subMenu', 'general'));
+    return view('frontend.index-b', compact('categoryblog', 'categoryporto', 'mainMenu', 'template', 'portofolio','testimonial', 'subMenu', 'general'));
   }
 
   public function about()
   {
 
     $template = Template::first();
-    $feature = Feature::first();
     $mainMenu = Mainmenu::all();
     $subMenu = Submenu::all();
     $categoryporto = Categoryporto::all();
     $categoryblog = Categoryblog::all();
     $general = General::first();
-
+    $galery = Gelery::all();
     $about = About::first();
 
     $ipUsers = $_SERVER['REMOTE_ADDR'];
@@ -103,7 +100,7 @@ class PageController extends Controller
     }
 
 
-    return view('frontend.about-b', compact('about', 'subMenu', 'general', 'categoryblog', 'categoryporto','mainMenu', 'template', 'feature'));
+    return view('frontend.about-b', compact('about', 'galery', 'subMenu', 'general', 'categoryblog', 'categoryporto','mainMenu', 'template',));
   }
   
   
@@ -246,30 +243,6 @@ class PageController extends Controller
 
 
  
-
-  public function contact()
-  {
-    $mainMenu = Mainmenu::all();
-    $subMenu = Submenu::all();
-    $categoryporto = Categoryporto::all();
-    $categoryblog = Categoryblog::all();
-    $template = Template::first();
-    $general = General::first();
-    $opening = Opening::all();
-
-
-    $ipUsers = $_SERVER['REMOTE_ADDR'];
-    $url = url('contact');
-    $visitor = Visitor::where('tanggal', date('Y-m-d'))->where('ip', $ipUsers)->where('url', $url)->get();
-    if (count($visitor) == 0) {
-      Visitor::create([
-        'ip' => $_SERVER['REMOTE_ADDR'],
-        'url' => url('/contact'),
-        'tanggal' => date('Y-m-d')
-      ]);
-    }
-    return view('frontend.contact', compact('mainMenu', 'opening', 'general', 'subMenu', 'categoryporto', 'categoryblog', 'template'));
-  }
 
   function sitemap()
   {

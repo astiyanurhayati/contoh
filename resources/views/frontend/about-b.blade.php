@@ -118,78 +118,22 @@
 </div>
 <!-- build_product_end -->
 
-<!-- counter_area_start -->
-{{-- <div class="counter_area">
-  <h1 class="opacity_text d-none d-lg-block">
-    Quick Fact
-  </h1>
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-4 col-md-4">
-        <div class="single_counter text-center">
-          <h3 class="counter">220</h3>
-          <span>Amazing Products</span>
-        </div>
-      </div>
-      <div class="col-xl-4  col-md-4">
-        <div class="single_counter text-center">
-          <h3 class="counter blue">7930</h3>
-          <span>Happy Clients</span>
-        </div>
-      </div>
-      <div class="col-xl-4 col-md-4">
-        <div class="single_counter text-center">
-          <h3 class="counter orange">67</h3>
-          <span>Support Daily Support</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> --}}
-<!-- counter_area_end -->
+
 
 <!-- instragram_area_start -->
 <div class="instragram_area">
-  <div class="single_instagram">
-    <img src="{{asset('asset-b/img/instragram/1.png')}}" alt="">
-    <div class="ovrelay">
-      <a href="#">
-        <i class="fa fa-instagram"></i>
-      </a>
+
+    @foreach ($galery as $item )
+    <div class="single_instagram">
+        <img src="{{asset('galeryimg/'.$item->gambar)}}" alt="{{$item->desk}}">
+        <div class="ovrelay">
+        <a href="#">
+            <i class="fa fa-instagram"></i>
+        </a>
+        </div>
     </div>
-  </div>
-  <div class="single_instagram">
-    <img src="{{asset('asset-b/img/instragram/2.png')}}" alt="">
-    <div class="ovrelay">
-      <a href="#">
-        <i class="fa fa-instagram"></i>
-      </a>
-    </div>
-  </div>
-  <div class="single_instagram">
-    <img src="{{asset('asset-b/img/instragram/3.png')}}" alt="">
-    <div class="ovrelay">
-      <a href="#">
-        <i class="fa fa-instagram"></i>
-      </a>
-    </div>
-  </div>
-  <div class="single_instagram">
-    <img src="{{asset('asset-b/img/instragram/4.png')}}" alt="">
-    <div class="ovrelay">
-      <a href="#">
-        <i class="fa fa-instagram"></i>
-      </a>
-    </div>
-  </div>
-  <div class="single_instagram">
-    <img src="{{asset('asset-b/img/instragram/5.png')}}" alt="">
-    <div class="ovrelay">
-      <a href="#">
-        <i class="fa fa-instagram"></i>
-      </a>
-    </div>
-  </div>
+   @endforeach
+
 </div>
 <!-- instragram_area_end -->
 <div class="Visit_Work text-center">
