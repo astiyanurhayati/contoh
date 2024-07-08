@@ -8,7 +8,6 @@ use App\Models\Gelery;
 use App\Models\Feature;
 use App\Models\General;
 use App\Models\Opening;
-use App\Models\Slidder;
 use App\Models\Submenu;
 use App\Models\Visitor;
 use App\Models\Mainmenu;

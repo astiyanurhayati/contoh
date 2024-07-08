@@ -13,7 +13,6 @@ use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\OpeningController;
 use App\Http\Controllers\SlidderController;
 use App\Http\Controllers\SubmenuController;
-use App\Http\Controllers\CkeditorController;
 use App\Http\Controllers\MainmenuController;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\PortofolioController;
@@ -45,7 +44,6 @@ Route::get('/blog/category/{category}', [PageController::class, 'filterBlog'])->
 Route::get('/search/blog', [PageController::class, 'blogSearch'])->name('blog.search');
 Route::get('/price', [PageController::class, 'price'])->name('price');
 
-Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::post('/contact/post', [FormcontactController::class, 'store'])->name('form.store');
 Route::get('/reload-captcha', [CapchaController::class, 'reloadCaptcha']);
 Route::get('portofolio', [PageController::class, 'portofolio'])->name('portofolio');

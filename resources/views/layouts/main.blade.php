@@ -50,6 +50,7 @@
             line-height: 60px;
             text-decoration: none;
             transition: transform 0.2s;
+           
         }
 
         .whatsapp-float a:hover {

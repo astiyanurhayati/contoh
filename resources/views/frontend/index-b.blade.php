@@ -1,4 +1,5 @@
 @extends('layouts.main-b')
+@section('title-head', $mainMenu[0]->title)
 @section('content')
 
   <!-- agency_heading_start -->

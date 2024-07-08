@@ -87,7 +87,6 @@
                     <li class="dropdown  {{ Route::currentRouteNamed('about') ?  "current" : '' }} "><a href="{{route('about')}}">{{$mainMenu[1]->name}}</a></li>
                     <li class="dropdown {{ Route::currentRouteNamed('portofolio') ?  "current" : '' }} "><a href="{{route('portofolio')}}">{{$mainMenu[2]->name}}</a></li>
                     <li class="dropdown {{ Route::currentRouteNamed('blog') ?  "current" : '' }} "><a href="{{route('blog')}}">{{$mainMenu[3]->name}}</a></li>
-                    <li class="{{ Route::currentRouteNamed('contact') ?  "current" : '' }} "><a href="{{route('contact')}}">{{$mainMenu[4]->name}}</a></li>
                   </ul>
                 </nav>
               </div>
