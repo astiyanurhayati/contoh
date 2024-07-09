@@ -40,8 +40,8 @@ Route::get('/blog/{slug}', [PageController::class, 'detailBlog'])->name('detail.
 Route::get('/blog/category/{category}', [PageController::class, 'filterBlog'])->name('filter.blog');
 Route::get('/search/blog', [PageController::class, 'blogSearch'])->name('blog.search');
 Route::get('/portofolio/{slug}', [PageController::class, 'detailPorto'])->name('detail.porto');
+Route::get('/portofolio', [PageController::class, 'portofolio'])->name('portofolio');
 
-Route::get('portofolio', [PageController::class, 'portofolio'])->name('portofolio');
 Route::middleware('isLogin')->group(function () {
     Route::prefix('dashboard/admin/')->group(function () {
         Route::get('/', [PageController::class, 'admin'])->name('dashboard');
@@ -50,7 +50,6 @@ Route::middleware('isLogin')->group(function () {
             Route::get('search/categoryporto', [CategoryportoController::class, 'search'])->name('search.categoryporto');
             Route::resource('category-blog', CategoryblogController::class);
             Route::get('search/category-blog', [CategoryblogController::class, 'search'])->name('search.categroyblog');
-            Route::resource('galery', GeleryController::class);
             Route::resource('/iklan', IklanController::class);
         });
        
