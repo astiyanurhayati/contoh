@@ -229,7 +229,7 @@
               <h3>Kami Membantu Membangun Produk Digital Impian Anda!</h3>
             </div>
             <p>Tim kami terdiri dari anak-muda yang bersemangat untuk memajukan teknologi indonesia dan akan memberikan layanan yang terbaik untuk anda</p>
-            <a href="{{url('/about')}}" class="underline_text">Lihat Lebih Lanjut</a>
+            <a href="{{url('/portofolio')}}" class="underline_text">Lihat Lebih Lanjut</a>
           </div>
 
         </div>
