@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
-    <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
+    <script src="http://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
     <!-- SweetAlert2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -94,13 +94,6 @@
                             </a>
                             <ul class="nav nav-treeview">
                                
-                           
-                                <li class="nav-item">
-                                    <a href="{{route('testimonial.index')}}" class="nav-link {{ Route::is('testimonial.index') ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Testimonial</p>
-                                    </a>
-                                </li>
                                 <li class="nav-item">
                                     <a href="{{route('galery.index')}}" class="nav-link {{ Route::is('galery.index') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>

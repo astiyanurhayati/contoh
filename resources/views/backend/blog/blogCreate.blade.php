@@ -105,7 +105,7 @@
     </form>
 </div>
 
-<script>
+{{-- <script>
     var editorClass = ['body'];
     editorClass.forEach(e => {
       CKEDITOR.replace(e, {
@@ -114,7 +114,7 @@
       })
     });
     </script>
-<script>
+<script> --}}
     function previewImage() {
 
         var preview = document.querySelector('#image-preview');
