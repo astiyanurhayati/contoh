@@ -5,9 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\About;
 use App\Models\Gelery;
-// use App\Models\Feature;
 use App\Models\General;
-use App\Models\Opening;
 use App\Models\Submenu;
 use App\Models\Visitor;
 use App\Models\Mainmenu;
@@ -17,7 +15,6 @@ use App\Models\Testimonial;
 use App\Models\Categoryblog;
 use Illuminate\Http\Request;
 use App\Models\Categoryporto;
-use App\Models\Formcontact;
 use App\Models\Iklan;
 use Illuminate\Support\Carbon;
 
@@ -29,22 +26,15 @@ class PageController extends Controller
   {
     $testimonial = Testimonial::all();
     $galeri = Gelery::all();
-    
     $categoryporto = Categoryporto::all();
     $categoryblog = Categoryblog::all();
-
     $portofolio = Portofolio::all();
-    
     $blog = Blog::all();
-
     $visitor = Visitor::all();
     $visitDay = Visitor::whereDate('tanggal', Carbon::today())->get();
-
     $startDate = Carbon::now()->startOfMonth();
     $endDate = Carbon::now()->endOfMonth();
     $visitMonth = Visitor::whereBetween('created_at', [$startDate, $endDate])->get();
-
-
     return view('backend.dahboard', compact(  'visitMonth', 'visitDay', 'visitor','blog', 'categoryporto','categoryblog', 'testimonial', 'galeri', 'portofolio'));
   }
   public function index()
@@ -161,13 +151,11 @@ class PageController extends Controller
   {
     $template = Template::first();
     $categoryblog  = Categoryblog::all();
-    $blogs = Blog::with('categoryblog')->paginate(5);
+    $blogs = Blog::with('categoryblog')->paginate(3);
     $mainMenu = Mainmenu::all();
     $general = General::first();
     $iklanblogs = Iklan::latest()->get();
-
     $mainMenu = Mainmenu::all();
-
     $ipUsers = $_SERVER['REMOTE_ADDR'];
     $url = url('blog');
     $visitor = Visitor::where('tanggal', date('Y-m-d'))->where('ip', $ipUsers)->where('url', $url)->get();
@@ -178,8 +166,6 @@ class PageController extends Controller
         'tanggal' => date('Y-m-d')
       ]);
     }
-
-
     return view('frontend.blog-b', compact('mainMenu','iklanblogs', 'categoryblog', 'general', 'blogs', 'template'));
   }
 
@@ -203,10 +189,6 @@ class PageController extends Controller
   public function blogSearch(Request $request)
   {
     $searchTerm = $request->input('search');
-
-    // return $searchTerm;
-
-    // Lakukan pencarian blog berdasarkan $searchTerm
     $blogs = Blog::where('judul', 'like', '%' . $searchTerm . '%')
       ->orWhere('body', 'like', '%' . $searchTerm . '%')
       ->paginate(5);
@@ -219,9 +201,7 @@ class PageController extends Controller
     $template = Template::first();
     $iklanblogs = Iklan::latest()->get();
 
-
-
-    return view('frontend.blog', compact('blogs', 'iklanblogs', 'searchTerm', 'general', 'galery', 'categoryblog', 'mainMenu','categoryporto', 'subMenu', 'template'));
+    return view('frontend.blog-b', compact('blogs', 'iklanblogs', 'searchTerm', 'general', 'galery', 'categoryblog', 'mainMenu','categoryporto', 'subMenu', 'template'));
   }
 
   public function filterBlog($category)

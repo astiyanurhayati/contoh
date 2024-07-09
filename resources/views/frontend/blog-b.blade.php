@@ -50,7 +50,6 @@
               <p>{{$blog->excerpt}}</p>
               <ul class="blog-info-link">
                 <li><a href="#"><i class="fa fa-user"></i>categir</a></li>
-                <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
               </ul>
             </div>
           </article>
@@ -58,27 +57,8 @@
 
           @endif
           
-          <nav class="blog-pagination justify-content-center d-flex">
-            <ul class="pagination">
-              <li class="page-item">
-                <a href="#" class="page-link" aria-label="Previous">
-                  <i class="ti-angle-left"></i>
-                </a>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link">1</a>
-              </li>
-              <li class="page-item active">
-                <a href="#" class="page-link">2</a>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link" aria-label="Next">
-                  <i class="ti-angle-right"></i>
-                </a>
-              </li>
-            </ul>
-            
-          </nav>
+          
+          {{$blogs->links('pagination::bootstrap-4')}}
         </div>
       </div>
       <div class="col-lg-4">
@@ -115,6 +95,7 @@
 
           <aside class="single_sidebar_widget popular_post_widget">
             <h3 class="widget_title">Recent Post</h3>
+            
             <div class="media post_item">
               <img src="{{asset('asset-b/img/post/post_1.png')}}" alt="post">
               <div class="media-body">
@@ -124,33 +105,7 @@
                 <p>January 12, 2019</p>
               </div>
             </div>
-            <div class="media post_item">
-              <img src="{{asset('asset-b/img/post/post_2.png')}}" alt="post">
-              <div class="media-body">
-                <a href="single-blog.html">
-                  <h3>The Amazing Hubble</h3>
-                </a>
-                <p>02 Hours ago</p>
-              </div>
-            </div>
-            <div class="media post_item">
-              <img src="{{asset('asset-b/img/post/post_3.png')}}" alt="post">
-              <div class="media-body">
-                <a href="single-blog.html">
-                  <h3>Astronomy Or Astrology</h3>
-                </a>
-                <p>03 Hours ago</p>
-              </div>
-            </div>
-            <div class="media post_item">
-              <img src="{{asset('asset-b/img/post/post_4.png')}}" alt="post">
-              <div class="media-body">
-                <a href="single-blog.html">
-                  <h3>Asteroids telescope</h3>
-                </a>
-                <p>01 Hours ago</p>
-              </div>
-            </div>
+           
           </aside>
    
         </div>

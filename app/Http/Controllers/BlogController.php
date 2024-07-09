@@ -19,8 +19,6 @@ class BlogController extends Controller
         ->orWhere('judul', 'like', "%$searchQuery%")
         ->orWhere('label', 'like', "%$searchQuery%")
         ->paginate(5);
-
-
         return view('backend.blog.blog', compact('blogs'));
    }
     public function index()
