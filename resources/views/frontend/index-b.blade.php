@@ -220,7 +220,7 @@
       <div class="row align-items-center">
         <div class="col-xl-6 col-md-6">
           <div class="build_img">
-            <img src="{{asset('asset-b/img/brand/band_big.png')}}" alt="">
+            <img src="{{asset('asset-b/img/content/Phone Mockup.png')}}" alt="">
           </div>
         </div>
         <div class="col-xl-5 offset-xl-1 col-md-6">
