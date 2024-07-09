@@ -33,7 +33,7 @@
         <div class="col-xl-12">
           <div class="video_banner video_bg_1">
             <a class="popup-video" href="https://www.youtube.com/watch?v=2hO5kma3uX8">
-              <i class="fa fa-play"></i>
+              <i class="fa fa-play fa-3x" style="margin-top: 0.9em; margin-left: 0.25em"></i>
             </a>
           </div>
         </div>
@@ -229,7 +229,7 @@
               <h3>Kami Membantu Membangun Produk Digital Impian Anda!</h3>
             </div>
             <p>Tim kami terdiri dari anak-muda yang bersemangat untuk memajukan teknologi indonesia dan akan memberikan layanan yang terbaik untuk anda</p>
-            <a href="{{url('/portofolio')}}" class="underline_text">Lihat Lebih Lanjut</a>
+            <a href="{{url('/about')}}" class="underline_text">Lihat Lebih Lanjut</a>
           </div>
 
         </div>
@@ -273,7 +273,7 @@
     <div class="single_instagram">
       <img src="{{asset('asset-b/img/content/1.png')}}" alt="">
       <div class="ovrelay">
-        <a href="#">
+        <a href="/portofolio/iyh-testing">
           <i class="fa fa-heart-o"></i>
         </a>
       </div>
@@ -281,7 +281,7 @@
     <div class="single_instagram">
       <img src="{{asset('asset-b/img/content/2.png')}}" alt="">
       <div class="ovrelay">
-        <a href="#">
+        <a href="/portofolio/iyh-testing">
           <i class="fa fa-heart-o"></i>
         </a>
       </div>
@@ -289,7 +289,7 @@
     <div class="single_instagram">
       <img src="{{asset('asset-b/img/content/3.png')}}" alt="">
       <div class="ovrelay">
-        <a href="#">
+        <a href="/portofolio/iyh-testing">
           <i class="fa fa-heart-o"></i>
         </a>
       </div>
@@ -297,7 +297,7 @@
     <div class="single_instagram">
       <img src="{{asset('asset-b/img/content/4.jpg')}}" alt="">
       <div class="ovrelay">
-        <a href="#">
+        <a href="/portofolio/iyh-testing">
           <i class="fa fa-heart-o"></i>
         </a>
       </div>
@@ -305,7 +305,7 @@
     <div class="single_instagram">
       <img src="{{asset('asset-b/img/content/5.png')}}" alt="">
       <div class="ovrelay">
-        <a href="#">
+        <a href="/portofolio/iyh-testing">
           <i class="fa fa-heart-o"></i>
         </a>
       </div>
