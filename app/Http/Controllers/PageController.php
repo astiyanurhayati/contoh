@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\About;
 use App\Models\Gelery;
-use App\Models\Feature;
+// use App\Models\Feature;
 use App\Models\General;
 use App\Models\Opening;
 use App\Models\Submenu;
@@ -51,6 +51,7 @@ class PageController extends Controller
   {
 
     $general = General::first();
+    // $feature = Feature::first();
  
     $testimonial = Testimonial::all();
     $portofolio = Portofolio::all();
@@ -73,13 +74,14 @@ class PageController extends Controller
       ]);
     }
 
-    return view('frontend.index-b', compact('categoryblog', 'categoryporto', 'mainMenu', 'template', 'portofolio','testimonial', 'subMenu', 'general'));
+    return view('frontend.index-b', compact('categoryblog', 'categoryporto', 'mainMenu', 'template', 'portofolio', 'testimonial', 'subMenu', 'general'));
   }
 
   public function about()
   {
 
     $template = Template::first();
+    // $feature = Feature::first();
     $mainMenu = Mainmenu::all();
     $subMenu = Submenu::all();
     $categoryporto = Categoryporto::all();
