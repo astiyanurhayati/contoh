@@ -63,7 +63,7 @@
                       <img src="{{asset('portofolioimg/'.$portofolios[2]->image)}}" alt="{{$portofolios[2]->judul}}">
                       <div class="work_hover">
                           <div class="work_inner">
-                              <a href="#">View Details</a>
+                              <a href="{{route('detail.porto', $portofolios[2]->slug)}}">View Details</a>
                           </div>
                       </div>
                   </div>

@@ -32,7 +32,7 @@
       <div class="row no-gutters">
         <div class="col-xl-12">
           <div class="video_banner video_bg_1">
-            <a class="popup-video" href="https://www.youtube.com/watch?v=BnTroF3vEqg">
+            <a class="popup-video" href="https://www.youtube.com/watch?v=2hO5kma3uX8">
               <i class="fa fa-play"></i>
             </a>
           </div>
@@ -60,7 +60,7 @@
               <img src="{{asset('portofolioimg/'.$portofolio[0]->image)}}" alt="{{$portofolio[0]->judul}}">
               <div class="work_hover">
                 <div class="work_inner">
-                  <a href="#">View Details</a>
+                  <a href="{{route('detail.porto', $portofolio[0]->slug)}}">Lihat Detail</a>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@
               <img src="{{asset('portofolioimg/'.$portofolio[1]->image)}}" alt="{{$portofolio[1]->judul}}">
               <div class="work_hover">
                 <div class="work_inner">
-                  <a href="#">View Details</a>
+                  <a href="{{route('detail.porto', $portofolio[1]->slug)}}">Lihat Detail</a>
                 </div>
               </div>
             </div>
@@ -88,7 +88,7 @@
               <img src="{{asset('portofolioimg/'.$portofolio[2]->image)}}" alt="{{$portofolio[2]->judul}}">
               <div class="work_hover">
                 <div class="work_inner">
-                  <a href="#">View Details</a>
+                  <a href="{{route('detail.porto', $portofolio[2]->slug)}}">Lihat Detail</a>
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@
               <img src="{{asset('portofolioimg/'.$portofolio[3]->image)}}" alt="{{$portofolio[3]->judul}}">
               <div class="work_hover">
                 <div class="work_inner">
-                  <a href="#">View Details</a>
+                  <a href="{{route('detail.porto', $portofolio[3]->slug)}}">Lihat Detail</a>
                 </div>
               </div>
             </div>
@@ -114,7 +114,7 @@
       <div class="row">
         <div class="col-xl-12">
           <div class="more_products text-center">
-            <a class="boxed_btn_round" href="#">More Products</a>
+            <a href="{{route('portofolio')}}">Lihat Detail</a>
           </div>
         </div>
       </div>

@@ -39,16 +39,13 @@ Route::get('/blog', [PageController::class, 'blog'])->name('blog');
 Route::get('/blog/{slug}', [PageController::class, 'detailBlog'])->name('detail.blog');
 Route::get('/blog/category/{category}', [PageController::class, 'filterBlog'])->name('filter.blog');
 Route::get('/search/blog', [PageController::class, 'blogSearch'])->name('blog.search');
-Route::get('/price', [PageController::class, 'price'])->name('price');
+Route::get('/portofolio/{slug}', [PageController::class, 'detailPorto'])->name('detail.porto');
 
-Route::get('/reload-captcha', [CapchaController::class, 'reloadCaptcha']);
 Route::get('portofolio', [PageController::class, 'portofolio'])->name('portofolio');
 Route::middleware('isLogin')->group(function () {
     Route::prefix('dashboard/admin/')->group(function () {
         Route::get('/', [PageController::class, 'admin'])->name('dashboard');
         Route::prefix('master-data/')->group(function () {
-            Route::resource('testimonial', TestimonialController::class);
-            Route::get('search/testimonial', [TestimonialController::class, 'search'])->name('search.testimonial');
             Route::resource('category-porto', CategoryportoController::class);
             Route::get('search/categoryporto', [CategoryportoController::class, 'search'])->name('search.categoryporto');
             Route::resource('category-blog', CategoryblogController::class);

@@ -83,10 +83,10 @@
               <div class="main-menu  d-none d-lg-block">
                 <nav>
                   <ul id="navigation">
-                    <li class="{{ Request::is('/') ? 'current' : '' }}"><a href="{{url('/')}}">{{$mainMenu[0]->name}}</a></li>
-                    <li class="dropdown  {{ Route::currentRouteNamed('about') ?  "current" : '' }} "><a href="{{route('about')}}">{{$mainMenu[1]->name}}</a></li>
-                    <li class="dropdown {{ Route::currentRouteNamed('portofolio') ?  "current" : '' }} "><a href="{{route('portofolio')}}">{{$mainMenu[2]->name}}</a></li>
-                    <li class="dropdown {{ Route::currentRouteNamed('blog') ?  "current" : '' }} "><a href="{{route('blog')}}">{{$mainMenu[3]->name}}</a></li>
+                    <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{url('/')}}">{{$mainMenu[0]->name}}</a></li>
+                    <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{route('about')}}">{{$mainMenu[1]->name}}</a></li>
+                    <li class=" {{ Request::is('portofolio') ? 'active' : '' }}"><a href="{{route('portofolio')}}">{{$mainMenu[2]->name}}</a></li>
+                    <li class="{{ Request::is('blog') ? 'active' : '' }}"><a href="{{route('blog')}}">{{$mainMenu[3]->name}}</a></li>
                   </ul>
                 </nav>
               </div>
@@ -166,12 +166,7 @@
         <div class="row">
           <div class="col-xl-12">
             <p class="copy_right text-center">
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;<script>
-                document.write(new Date().getFullYear());
-
-              </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy; Buatinaja - 2024 All rights reserved </p>
             </p>
           </div>
         </div>

@@ -130,17 +130,14 @@ class PageController extends Controller
 
     return view('frontend.portofolio-b', compact('subMenu', 'general', 'categoryblog','mainMenu', 'portofolios', 'template', 'categoryporto'));
   }
-  public function detailPortofolio($slug)
+  public function detailPorto($slug)
   {
     $template = Template::first();
-    $datas = Portofolio::all();
     $data = Portofolio::where('slug', $slug)->first();
-
     $mainMenu = Mainmenu::all();
     $categoryporto = Categoryporto::all();
     $categoryblog = Categoryblog::all();
     $general = General::first();
-
     $subMenu = Submenu::all();
 
     $ipUsers = $_SERVER['REMOTE_ADDR'];
@@ -155,7 +152,7 @@ class PageController extends Controller
     }
 
 
-    return view('frontend.detailPortofolio', compact('subMenu', 'general', 'categoryblog', 'categoryporto','mainMenu', 'data', 'datas', 'template'));
+    return view('frontend.detail-portofolio-b', compact('subMenu', 'general', 'categoryblog', 'categoryporto','mainMenu', 'data','template'));
   }
 
   public function blog()
