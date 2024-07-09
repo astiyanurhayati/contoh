@@ -9,7 +9,7 @@
       <lastmod>{{date('Y-m-d', strtotime($c->created_at))}}</lastmod>
       <priority>{{$key < 1 ? '1.00' : '0.80'}}</priority>
     </url>
-  @endforeach
+  @endforeach 
 
   @foreach ($subMenu as $key=>$c)
     <url>
