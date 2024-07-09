@@ -1,11 +1,12 @@
-@extends('layouts.blogs')
+@extends('layouts.main-b')
 
 
 @if(request()->is('blog/category/*'))
 @section('sub-blog', $category->name)
 @endif
 @section('title-head', "Our Blog")
-@section('search')
+
+@section('content')
    <!-- Search -->
    <div class="sidebar-widget search-widget">
     <form action="{{route('blog.search')}}">

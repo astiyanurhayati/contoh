@@ -83,9 +83,9 @@
               <div class="main-menu  d-none d-lg-block">
                 <nav>
                   <ul id="navigation">
-                    <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{url('/')}}">{{$mainMenu[0]->name}}</a></li>
-                    <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{route('about')}}">{{$mainMenu[1]->name}}</a></li>
-                    <li class=" {{ Request::is('portofolio') ? 'active' : '' }}"><a href="{{route('portofolio')}}">{{$mainMenu[2]->name}}</a></li>
+                    <li class="active"><a href="{{url('/')}}">{{$mainMenu[0]->name}}</a></li>
+                    <li class="{{ Request::is('/about') ? 'active' : '' }}"><a href="{{route('about')}}">{{$mainMenu[1]->name}}</a></li>
+                    <li class=" {{ Request::is('/portofolio') ? 'active' : '' }}"><a href="{{route('portofolio')}}">{{$mainMenu[2]->name}}</a></li>
                     <li class="{{ Request::is('blog') ? 'active' : '' }}"><a href="{{route('blog')}}">{{$mainMenu[3]->name}}</a></li>
                   </ul>
                 </nav>

@@ -94,13 +94,6 @@
                             </a>
                             <ul class="nav nav-treeview">
                                
-                           
-                                <li class="nav-item">
-                                    <a href="{{route('testimonial.index')}}" class="nav-link {{ Route::is('testimonial.index') ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Testimonial</p>
-                                    </a>
-                                </li>
                                 <li class="nav-item">
                                     <a href="{{route('galery.index')}}" class="nav-link {{ Route::is('galery.index') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
