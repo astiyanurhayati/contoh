@@ -10,7 +10,7 @@
           <div class="agency_text">
             <h3>Jasa Pembuatan <span>UI/UX Design & Website</span><br>
                Konsultasi Gratis Sekarang!</h3>
-            <a href="{{route('portofolio')}}" target="_blank" class="underline_text">Lihat Lebih Lanjut</a>
+            <a href="#video-player" class="underline_text">Lihat Lebih Lanjut</a>
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
   <!-- agency_heading_end -->
 
   <!-- video_area_start -->
-  <div class="video_area">
+  <div class="video_area" id="video-player">
     <div class="container-fluid p-0">
       <div class="row no-gutters">
         <div class="col-xl-12">
@@ -313,6 +313,6 @@
   </div>
   <!-- instragram_area_end -->
   <div class="Visit_Work text-center">
-    <a href="{{url('/portofolio')}}" class="Visit_link">Lihat Apa Yang Telah Kami Kerjakan</a>
+    <a href="{{url('/portofolio')}}" class="Visit_link hover-text">Lihat Apa Yang Telah Kami Kerjakan</a>
   </div>
 @endsection

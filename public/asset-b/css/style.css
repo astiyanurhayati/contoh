@@ -4355,3 +4355,24 @@ h6 {
   margin-right: 10px;
   font-size: 12px;
 }
+.shiny-text {
+  background: linear-gradient(to right, #666363 0, white 10%, #666363 20%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 3s linear infinite;
+}
+@keyframes  animate {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 470px;
+  }
+  100% {
+    background-position: 470px;
+  }
+}
+
+.hover-text:hover {
+  color: #000000;
+}
