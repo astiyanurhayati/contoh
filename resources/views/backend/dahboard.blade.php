@@ -104,17 +104,7 @@
                                 </div>
                                 <!-- /.info-box -->
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <div class="info-box">
-                                    <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-                                    <div class="info-box-content">
-                                        <span class="info-box-text">Contact</span>
-                                        <span class="info-box-number">{{count($visitor->where('url', url('/contact')))}}</span>
-                                    </div>
-                                    <!-- /.info-box-content -->
-                                </div>
-                                <!-- /.info-box -->
-                            </div>
+                           
 
                         </div>
                     </div>
@@ -198,17 +188,7 @@
                                 </div>
                                 <!-- /.info-box -->
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <div class="info-box">
-                                    <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-                                    <div class="info-box-content">
-                                        <span class="info-box-text">Contact</span>
-                                        <span class="info-box-number">{{count($visitDay->where('url', url('/contact')))}}</span>
-                                    </div>
-                                    <!-- /.info-box-content -->
-                                </div>
-                                <!-- /.info-box -->
-                            </div>
+                          
 
                         </div>
                     </div>
@@ -363,24 +343,7 @@
         </div>
     </div>
   
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small card -->
-        <div class="small-box bg-danger">
-            <div class="inner">
-                <h3>{{count($contactMessage)}}</h3>
-
-                <p>Contact Message</p>
-            </div>
-            <div class="icon">
-                <i class="fas fa-chart-pie"></i>
-            </div>
-            <a href="{{route('form.contact')}}" class="small-box-footer">
-                More info <i class="fas fa-arrow-circle-right"></i>
-            </a>
-        </div>
-    </div>
-    <!-- ./col -->
+    
 </div>
 
 <h4><b>Items</b></h4>
