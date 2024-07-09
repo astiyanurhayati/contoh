@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\About;
+use App\Models\Iklan;
 use App\Models\Gelery;
 use App\Models\General;
 use App\Models\Submenu;
@@ -15,8 +16,8 @@ use App\Models\Testimonial;
 use App\Models\Categoryblog;
 use Illuminate\Http\Request;
 use App\Models\Categoryporto;
-use App\Models\Iklan;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
@@ -152,6 +153,7 @@ class PageController extends Controller
     $template = Template::first();
     $categoryblog  = Categoryblog::all();
     $blogs = Blog::with('categoryblog')->paginate(3);
+    $blogsb = Blog::latest()->paginate(5);
     $mainMenu = Mainmenu::all();
     $general = General::first();
     $iklanblogs = Iklan::latest()->get();
@@ -166,24 +168,27 @@ class PageController extends Controller
         'tanggal' => date('Y-m-d')
       ]);
     }
-    return view('frontend.blog-b', compact('mainMenu','iklanblogs', 'categoryblog', 'general', 'blogs', 'template'));
+    $total = Blog::select('categoryblog_id', DB::raw('count(id) as total'))
+    ->groupBy('categoryblog_id')
+    ->get();
+    return view('frontend.blog-b', compact('mainMenu', 'total' ,'blogsb','iklanblogs', 'categoryblog', 'general', 'blogs', 'template'));
   }
 
   public function detailBlog($slug)
   {
     $data = Blog::where('slug', $slug)->first();
     $template = Template::first();
-
     $galery = Gelery::paginate(9);
-    $categoryblog = Categoryblog::all();
     $mainMenu = Mainmenu::all();
     $categoryporto = Categoryporto::all();
     $general = General::first();
     $categoryblog = Categoryblog::all();
     $subMenu = Submenu::all();
     $iklanblogs = Iklan::latest()->get();
+    $blogsb = Blog::latest()->paginate(5);
+    
 
-    return view('frontend.detail-blog-b', compact('subMenu', 'iklanblogs', 'general', 'categoryblog', 'categoryporto','mainMenu', 'categoryblog', 'template', 'data', 'galery'));
+    return view('frontend.detail-blog-b', compact('subMenu', 'iklanblogs', 'blogsb', 'general', 'categoryblog', 'categoryporto','mainMenu', 'categoryblog', 'template', 'data', 'galery'));
   }
 
   public function blogSearch(Request $request)

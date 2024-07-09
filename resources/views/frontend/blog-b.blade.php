@@ -85,7 +85,8 @@
               <li>
                 <a href="#" class="d-flex">
                   <p>{{$cate->name}}</p>
-                  <p>(37)</p>
+                  <p>({{ $total->where('categoryblog_id',
+                                    $cate->id)->first()->total ?? 0 }})</p>
                 </a>
               </li>
               @endforeach
@@ -96,16 +97,17 @@
           <aside class="single_sidebar_widget popular_post_widget">
             <h3 class="widget_title">Recent Post</h3>
             
+            @foreach ($blogsb as $b )
             <div class="media post_item">
-              <img src="{{asset('asset-b/img/post/post_1.png')}}" alt="post">
+              <img src="{{asset($blog->gambar)}}" alt="post" width="100px">
               <div class="media-body">
-                <a href="single-blog.html">
-                  <h3>From life was you fish...</h3>
+                <a href="{{route('detail.blog', $b->slug)}}">
+                  <h3>{{Str::limit($blog->judul, 22)}}</h3>
                 </a>
-                <p>January 12, 2019</p>
+                <p>{{$blog->created_at->format('d-F-Y')}}</p>
               </div>
             </div>
-           
+            @endforeach
           </aside>
    
         </div>
@@ -113,5 +115,4 @@
     </div>
   </div>
 </section>
-<!--================Blog Area =================-->
 @endsection
