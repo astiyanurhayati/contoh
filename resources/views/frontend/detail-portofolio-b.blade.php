@@ -28,22 +28,12 @@
                  <li>
                     <a href="#" class="d-flex">
                        <p>{{$cate->name}}</p>
-                       <p>(37)</p>
                     </a>
                  </li>
                  @endforeach
               </ul>
            </aside>
-         
-           <aside class="single_sidebar_widget tag_cloud_widget">
-              <h4 class="widget_title">Tag Clouds</h4>
-              <ul class="list">
-                 <li>
-                    <a href="#">project</a>
-                 </li>
-                
-              </ul>
-           </aside>
+      
         </div>
      </div>
   </div>

@@ -35,8 +35,8 @@
                       <img src="{{asset('portofolioimg/'.$portofolios[0]->image)}}" alt="{{$portofolios[0]->judul}}">
                       <div class="work_hover">
                           <div class="work_inner">
-                              <a href="#">View Details</a>
-                          </div>
+                            <a href="{{route('detail.porto', $portofolios[0]->slug)}}">View Details</a>
+                        </div>
                       </div>
                   </div>
                   <div class="work_heading">
@@ -48,8 +48,8 @@
                       <img src="{{asset('portofolioimg/'.$portofolios[1]->image)}}" alt="{{$portofolios[1]->judul}}">
                       <div class="work_hover">
                           <div class="work_inner">
-                              <a href="#">View Details</a>
-                          </div>
+                            <a href="{{route('detail.porto', $portofolios[1]->slug)}}">View Details</a>
+                        </div>
                       </div>
                   </div>
                   <div class="work_heading">
