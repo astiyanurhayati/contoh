@@ -229,7 +229,7 @@
               <h3>Kami Membantu Membangun Produk Digital Impian Anda!</h3>
             </div>
             <p>Tim kami terdiri dari anak-muda yang bersemangat untuk memajukan teknologi indonesia dan akan memberikan layanan yang terbaik untuk anda</p>
-            <a href="#" class="underline_text">Lihat Lebih Lanjut</a>
+            <a href="{{url('/portofolio')}}" class="underline_text">Lihat Lebih Lanjut</a>
           </div>
 
         </div>
@@ -239,7 +239,7 @@
   <!-- build_product_end -->
 
   <!-- counter_area_start -->
-  <div class="counter_area">
+  {{-- <div class="counter_area">
     <h1 class="opacity_text d-none d-lg-block">
       Quick Fact
     </h1>
@@ -265,54 +265,54 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
   <!-- counter_area_end -->
 
   <!-- instragram_area_start -->
-  <div class="instragram_area">
+  <div class="instragram_area" style="margin-top: 13em">
     <div class="single_instagram">
-      <img src="{{asset('asset-b/img/instragram/1.png')}}" alt="">
+      <img src="{{asset('asset-b/img/content/1.png')}}" alt="">
       <div class="ovrelay">
         <a href="#">
-          <i class="fa fa-instagram"></i>
+          <i class="fa fa-heart-o"></i>
         </a>
       </div>
     </div>
     <div class="single_instagram">
-      <img src="{{asset('asset-b/img/instragram/2.png')}}" alt="">
+      <img src="{{asset('asset-b/img/content/2.png')}}" alt="">
       <div class="ovrelay">
         <a href="#">
-          <i class="fa fa-instagram"></i>
+          <i class="fa fa-heart-o"></i>
         </a>
       </div>
     </div>
     <div class="single_instagram">
-      <img src="{{asset('asset-b/img/instragram/3.png')}}" alt="">
+      <img src="{{asset('asset-b/img/content/3.png')}}" alt="">
       <div class="ovrelay">
         <a href="#">
-          <i class="fa fa-instagram"></i>
+          <i class="fa fa-heart-o"></i>
         </a>
       </div>
     </div>
     <div class="single_instagram">
-      <img src="{{asset('asset-b/img/instragram/4.png')}}" alt="">
+      <img src="{{asset('asset-b/img/content/4.jpg')}}" alt="">
       <div class="ovrelay">
         <a href="#">
-          <i class="fa fa-instagram"></i>
+          <i class="fa fa-heart-o"></i>
         </a>
       </div>
     </div>
     <div class="single_instagram">
-      <img src="{{asset('asset-b/img/instragram/5.png')}}" alt="">
+      <img src="{{asset('asset-b/img/content/5.png')}}" alt="">
       <div class="ovrelay">
         <a href="#">
-          <i class="fa fa-instagram"></i>
+          <i class="fa fa-heart-o"></i>
         </a>
       </div>
     </div>
   </div>
   <!-- instragram_area_end -->
   <div class="Visit_Work text-center">
-    <a href="#" class="Visit_link">Lihat Apa Yang Telah Kami Kerjakan</a>
+    <a href="{{url('/portofolio')}}" class="Visit_link">Lihat Apa Yang Telah Kami Kerjakan</a>
   </div>
 @endsection

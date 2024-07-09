@@ -75,18 +75,18 @@
             <div class="col-xl-2 col-lg-2">
               <div class="logo-img">
                 <a href="index.html">
-                  <img src="{{asset('asset-b/img/utils/buatinaja.png')}}" alt="Buatinaja Logo" width="135px" style="margin-left: 60px">
+                  <img src="{{asset('asset-b/img/utils/buatinaja.png')}}" alt="Buatinaja Logo" width="165px" style="margin-left: 60px">
                 </a>
               </div>
             </div>
             <div class="col-xl-7 col-lg-7">
-              <div class="main-menu  d-none d-lg-block">
+              <div class="main-menu d-none d-lg-block">
                 <nav>
-                  <ul id="navigation">
-                    <li class="active"><a href="{{url('/')}}">{{$mainMenu[0]->name}}</a></li>
-                    <li class="{{ Request::is('/about') ? 'active' : '' }}"><a href="{{route('about')}}">{{$mainMenu[1]->name}}</a></li>
-                    <li class=" {{ Request::is('/portofolio') ? 'active' : '' }}"><a href="{{route('portofolio')}}">{{$mainMenu[2]->name}}</a></li>
-                    <li class="{{ Request::is('blog') ? 'active' : '' }}"><a href="{{route('blog')}}">{{$mainMenu[3]->name}}</a></li>
+                  <ul id="navigation" >
+                    <li class="active"><a style="font-size: 1.05em" href="{{url('/')}}">{{$mainMenu[0]->name}}</a></li>
+                    <li class="{{ Request::is('/about') ? 'active' : '' }}"><a style="font-size: 1.05em" href="{{route('about')}}">{{$mainMenu[1]->name}}</a></li>
+                    <li class=" {{ Request::is('/portofolio') ? 'active' : '' }}"><a style="font-size: 1.05em" href="{{route('portofolio')}}">{{$mainMenu[2]->name}}</a></li>
+                    <li class="{{ Request::is('blog') ? 'active' : '' }}"><a style="font-size: 1.05em" href="{{route('blog')}}">{{$mainMenu[3]->name}}</a></li>
                   </ul>
                 </nav>
               </div>
@@ -124,7 +124,7 @@
               </h3>
               <ul>
                 <li><a href="{{$general->fb}}">Facebook</a></li>
-                <li><a href="{{$general->tw}}"> Twitter</a></li>
+                <li><a href="{{$general->tw}}">Telegram</a></li>
                 <li><a href="{{$general->ig}}">Instagram</a></li>
                 <li><a href="{{$general->yt}}">Youtube</a></li>
 
@@ -138,14 +138,15 @@
                 Links
               </h3>
               <ul>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="work.html"> Work</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="{{ url('/') }}">Home</a></li>
+                <li><a href="{{ url('/about') }}">Profile</a></li>
+                <li><a href="{{ url('/portofolio') }}">Portofolio</a></li>
+                <li><a href="{{ url('/blog') }}">Blog</a></li>
               </ul>
 
             </div>
           </div>
-          <div class="col-xl-4 col-md-6 col-lg-4">
+          {{-- <div class="col-xl-4 col-md-6 col-lg-4">
             <div class="footer_widget">
               <h3 class="footer_title">
                 Address
@@ -156,7 +157,7 @@
                 <a target="_blank" href="+10 672 367 3789">+10 672 367 3789</a>
               </p>
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
@@ -166,7 +167,7 @@
         <div class="row">
           <div class="col-xl-12">
             <p class="copy_right text-center">
-              Copyright &copy; Buatinaja - 2024 All rights reserved </p>
+              Buatinaja since 2024 <i class="fa fa-heart-o" aria-hidden="true"></i>
             </p>
           </div>
         </div>
