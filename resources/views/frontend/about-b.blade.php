@@ -31,7 +31,7 @@
     <div class="row no-gutters">
       <div class="col-xl-12">
         <div class="video_banner video_bg_1">
-          <a class="popup-video" href="https://www.youtube.com/watch?v=BnTroF3vEqg">
+          <a class="popup-video" href="https://www.youtube.com/watch?v=2hO5kma3uX8">
             <i class="fa fa-play"></i>
           </a>
         </div>
