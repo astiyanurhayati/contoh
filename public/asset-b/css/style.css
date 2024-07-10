@@ -450,12 +450,14 @@ h3 {
   background: #00a7ff;
 }
 .underline_text {
+  color: #000;
   position: relative;
   z-index: 0;
   cursor: pointer;
   padding: 7px;
   font-size: 16px;
   font-weight: 400;
+  text-decoration: none;
 }
 .underline_text:before {
   position: absolute;
@@ -465,7 +467,22 @@ h3 {
   background: #ffcb00;
   bottom: 0;
   left: 0;
+  transition: width 0.3s ease;
 }
+.underline_text:hover {
+  color: #ffcb00; 
+}
+.underline_text:hover:before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: #ffcb00;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
 .section_title h3 {
   font-size: 46px;
   font-weight: 600;
@@ -4375,4 +4392,33 @@ h6 {
 
 .hover-text:hover {
   color: #000000;
+}
+
+.underline_text_v {
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+  padding: 7px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.underline_text_v:before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: #ffffff;
+  bottom: 0;
+  left: 0;
+}
+
+.underline_text_v:hover:before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: #000000;
+  bottom: 0;
+  left: 0;
 }

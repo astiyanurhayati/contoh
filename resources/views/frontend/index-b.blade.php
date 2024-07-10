@@ -114,7 +114,7 @@
       <div class="row">
         <div class="col-xl-12">
           <div class="more_products text-center">
-            <a href="{{route('portofolio')}}">Lihat Detail</a>
+            <a href="{{route('portofolio')}}" class="underline_text">Lihat Detail</a>
           </div>
         </div>
       </div>
@@ -313,6 +313,6 @@
   </div>
   <!-- instragram_area_end -->
   <div class="Visit_Work text-center">
-    <a href="{{url('/portofolio')}}" class="Visit_link hover-text">Lihat Apa Yang Telah Kami Kerjakan</a>
+    <a href="{{url('/portofolio')}}" class="Visit_link hover-text underline_text_v">Lihat Apa Yang Telah Kami Kerjakan</a>
   </div>
 @endsection
