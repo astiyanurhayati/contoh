@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
-use App\Models\About;
 use App\Models\Iklan;
 use App\Models\Gelery;
 use App\Models\General;
@@ -66,37 +65,7 @@ class PageController extends Controller
     }
 
     return view('frontend.index-b', compact('categoryblog', 'categoryporto', 'mainMenu', 'template', 'portofolio', 'testimonial', 'subMenu', 'general'));
-  }
-
-  public function about()
-  {
-
-    $template = Template::first();
-    // $feature = Feature::first();
-    $mainMenu = Mainmenu::all();
-    $subMenu = Submenu::all();
-    $categoryporto = Categoryporto::all();
-    $categoryblog = Categoryblog::all();
-    $general = General::first();
-    $galery = Gelery::all();
-    $about = About::first();
-
-    $ipUsers = $_SERVER['REMOTE_ADDR'];
-    $url = url('/about');
-    $visitor = Visitor::where('tanggal', date('Y-m-d'))->where('ip', $ipUsers)->where('url', $url)->get();
-    if (count($visitor) == 0) {
-      Visitor::create([
-        'ip' => $_SERVER['REMOTE_ADDR'],
-        'url' => url('/about'),
-        'tanggal' => date('Y-m-d')
-      ]);
-    }
-
-
-    return view('frontend.about-b', compact('about', 'galery', 'subMenu', 'general', 'categoryblog', 'categoryporto','mainMenu', 'template',));
-  }
-  
-  
+  }  
 
   public function portofolio()
   {

@@ -84,7 +84,6 @@
                 <nav>
                   <ul id="navigation" >
                     <li class="active"><a style="font-size: 1.05em" href="{{url('/')}}">{{$mainMenu[0]->name}}</a></li>
-                    <li class="{{ Request::is('/about') ? 'active' : '' }}"><a style="font-size: 1.05em" href="{{route('about')}}">{{$mainMenu[1]->name}}</a></li>
                     <li class=" {{ Request::is('/portofolio') ? 'active' : '' }}"><a style="font-size: 1.05em" href="{{route('portofolio')}}">{{$mainMenu[2]->name}}</a></li>
                     <li class="{{ Request::is('blog') ? 'active' : '' }}"><a style="font-size: 1.05em" href="{{route('blog')}}">{{$mainMenu[3]->name}}</a></li>
                   </ul>
@@ -139,7 +138,6 @@
               </h3>
               <ul>
                 <li><a href="{{ url('/') }}">Home</a></li>
-                <li><a href="{{ url('/about') }}">Profile</a></li>
                 <li><a href="{{ url('/portofolio') }}">Portofolio</a></li>
                 <li><a href="{{ url('/blog') }}">Blog</a></li>
               </ul>

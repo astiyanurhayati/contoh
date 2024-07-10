@@ -22,12 +22,6 @@ class MainmenuSeeder extends Seeder
         ]);
 
         Mainmenu::create([
-            'name' => 'Profile',
-            'title' => 'Our Profile', 
-            'show' => 'on'
-        ]);
-
-        Mainmenu::create([
             'name' => 'Portofolio',
             'title' => 'Our Portofolio', 
             'show' => 'on'

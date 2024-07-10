@@ -16,13 +16,6 @@ class SubmenuSeeder extends Seeder
     public function run()
     {
         Submenu::create([
-            'name' => 'About Us', 
-            'title' => 'About Us', 
-            'show' => 'on', 
-            'mainmenu_id' => 2, 
-            "url" => "about"
-        ]);
-        Submenu::create([
             'name' => 'Our Staff', 
             'title' => 'Our Staff', 
             'show' => 'on', 
