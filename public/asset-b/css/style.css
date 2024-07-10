@@ -553,7 +553,7 @@ h3 {
   position: absolute;
   right: 0;
   top: 67px;
-  font-size: 190px;
+  font-size: 170px;
   font-weight: 900;
   color: #f6f6f6;
 }
@@ -1009,13 +1009,19 @@ h3 {
   margin-bottom: 53px;
 }
 @media (max-width: 767px) {
-  .agency_heading .agency_text h3 {
+  .agency_heading .agency_text .agency_text_porto h3 {
     font-size: 30px;
     line-height: 42px;
   }
 }
-.agency_heading .agency_text h3 span {
+.agency_heading .agency_text .agency_text_porto h3 span {
   text-decoration: underline;
+}
+.agency_heading .agency_text_porto h3 {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-bottom: 30px;
 }
 .agency_heading .animated_shape .anim_1 {
   position: absolute;
@@ -1265,8 +1271,8 @@ h3 {
   color: #fff !important;
 }
 .works_area {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 40px;
+  padding-bottom: 30px;
   position: relative;
   z-index: 0;
 }
@@ -1283,7 +1289,7 @@ h3 {
   }
 }
 .works_area .opacity_text2 {
-  top: -100px;
+  top: -145px;
 }
 .works_area .single_work {
   margin-bottom: 80px;
