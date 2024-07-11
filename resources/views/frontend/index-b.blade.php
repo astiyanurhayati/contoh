@@ -238,42 +238,13 @@
   </div>
   <!-- build_product_end -->
 
-  <!-- counter_area_start -->
-  {{-- <div class="counter_area">
-    <h1 class="opacity_text d-none d-lg-block">
-      Quick Fact
-    </h1>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-4 col-md-4">
-          <div class="single_counter text-center">
-            <h3 class="counter">220</h3>
-            <span>Amazing Products</span>
-          </div>
-        </div>
-        <div class="col-xl-4  col-md-4">
-          <div class="single_counter text-center">
-            <h3 class="counter blue">7930</h3>
-            <span>Happy Clients</span>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-4">
-          <div class="single_counter text-center">
-            <h3 class="counter orange">67</h3>
-            <span>Support Daily Support</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> --}}
-  <!-- counter_area_end -->
-
+  
   <!-- instragram_area_start -->
   <div class="instragram_area" style="margin-top: 13em">
     <div class="single_instagram">
       <img src="{{asset('asset-b/img/content/1.png')}}" alt="">
       <div class="ovrelay">
-        <a href="/portofolio/iyh-testing">
+        <a href="{{route('portofolio')}}">
           <i class="fa fa-heart-o"></i>
         </a>
       </div>
@@ -281,7 +252,7 @@
     <div class="single_instagram">
       <img src="{{asset('asset-b/img/content/2.png')}}" alt="">
       <div class="ovrelay">
-        <a href="/portofolio/iyh-testing">
+        <a href="{{route('portofolio')}}">
           <i class="fa fa-heart-o"></i>
         </a>
       </div>
@@ -289,7 +260,7 @@
     <div class="single_instagram">
       <img src="{{asset('asset-b/img/content/3.png')}}" alt="">
       <div class="ovrelay">
-        <a href="/portofolio/iyh-testing">
+        <a href="{{route('portofolio')}}">
           <i class="fa fa-heart-o"></i>
         </a>
       </div>
@@ -297,7 +268,7 @@
     <div class="single_instagram">
       <img src="{{asset('asset-b/img/content/4.jpg')}}" alt="">
       <div class="ovrelay">
-        <a href="/portofolio/iyh-testing">
+        <a href="{{route('portofolio')}}">
           <i class="fa fa-heart-o"></i>
         </a>
       </div>
@@ -305,7 +276,7 @@
     <div class="single_instagram">
       <img src="{{asset('asset-b/img/content/5.png')}}" alt="">
       <div class="ovrelay">
-        <a href="/portofolio/iyh-testing">
+        <a href="{{route('portofolio')}}">
           <i class="fa fa-heart-o"></i>
         </a>
       </div>

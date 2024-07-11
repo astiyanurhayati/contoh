@@ -87,12 +87,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                
-                                <li class="nav-item">
-                                    <a href="{{route('galery.index')}}" class="nav-link {{ Route::is('galery.index') ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Galeri</p>
-                                    </a>
-                                </li>
+                           
                                 <li class="nav-item">
                                     <a href="{{route('iklan.index')}}" class="nav-link {{ Route::is('iklan.index') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
@@ -115,31 +110,14 @@
 
                             </ul>
                         </li>
-
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-cog nav-icon"></i>
-                                <p>
-                                    Konfigurasi
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
+                            <a href="{{route('general.index')}}" class="nav-link {{ Route::is('general.index') ? 'active' : ''}}">
+                                <i class="nav-icon fas fa-file"></i>
+                                <p>Konfigurasi General</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{route('general.index')}}" class="nav-link {{ Route::is('general.index') ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>General</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('template.index')}}" class="nav-link {{ Route::is('template.index') ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Template</p>
-                                    </a>
-                                </li>
-
-                            </ul>
                         </li>
+                      
+                        
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
@@ -214,10 +192,10 @@
 
         <!-- Main Footer -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="o">PT Wan Teknologi Internasional</a>.</strong>
+            <strong>Copyright &copy; 2024 <a href="o">Buatinaja Team</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
+                <b>Version</b> 1.0
             </div>
         </footer>
     </div>

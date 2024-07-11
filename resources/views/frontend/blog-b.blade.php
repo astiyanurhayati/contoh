@@ -99,12 +99,12 @@
             
             @foreach ($blogsb as $b )
             <div class="media post_item">
-              <img src="{{asset($blog->gambar)}}" alt="post" width="100px">
+              <img src="{{asset($b->gambar)}}" alt="post" width="100px">
               <div class="media-body">
                 <a href="{{route('detail.blog', $b->slug)}}">
-                  <h3>{{Str::limit($blog->judul, 22)}}</h3>
+                  <h3>{{Str::limit($b->judul, 22)}}</h3>
                 </a>
-                <p>{{$blog->created_at->format('d-F-Y')}}</p>
+                <p>{{$b->created_at->format('d-F-Y')}}</p>
               </div>
             </div>
             @endforeach

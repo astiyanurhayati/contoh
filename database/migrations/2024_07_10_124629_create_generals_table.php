@@ -25,12 +25,12 @@ return new class extends Migration
             $table->text('email')->nullable();
             $table->text('footer')->nullable();
             $table->text('linkfooter')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->string('title')->nullable();
-            $table->string('keywords')->nullable();
-            $table->string('searchengine')->nullable();
+            $table->text('keywords')->nullable();
+            $table->text('searchengine')->nullable();
             $table->string('author')->nullable();
-            $table->string('website')->nullable();
+            $table->text('website')->nullable();
             $table->timestamps();
         });
     }

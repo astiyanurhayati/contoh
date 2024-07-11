@@ -12,7 +12,6 @@
         , text: '{{ session('
         success ') }}'
     });
-
 </script>
 @endif
 <div class="card card-primary">
@@ -31,22 +30,18 @@
                 <label>Intagram</label>
                 <input type="text" name="ig" class="form-control" value="{{$data->ig}}" fdprocessedid="bp6kma">
             </div>
-           
             <div class="form-group col-md-4">
                 <label>Phone 1</label>
                 <input type="text" name="phone1" class="form-control" value="{{$data->phone1}}" fdprocessedid="bp6kma">
             </div>
-          
             <div class="form-group col-md-4">
                 <label>WhatsApp</label>
                 <input type="text" name="wa" class="form-control" value="{{$data->wa}}" fdprocessedid="bp6kma">
             </div>
             <div class="form-group col-md-4">
                 <label>Email</label>
-                <input type="text" name="email1" class="form-control" value="{{$data->email1}}" fdprocessedid="bp6kma">
+                <input type="text" name="email" class="form-control" value="{{$data->email}}" fdprocessedid="bp6kma">
             </div>
-            
-           
             <div class="form-group col-md-6">
                 <label>Alamat</label>
                 <textarea name="address" class="form-control" id="" cols="2" rows="2">{{$data->address}}</textarea>
@@ -71,9 +66,6 @@
                 <label>Meta Website</label>
                 <input type="text" name="website" class="form-control" value="{{$data->website}}" fdprocessedid="bp6kma">
             </div>
-          
-
-           
             <div class="form-group col-md-6">
                 <label>Copyright</label>
                 <input type="text" name="footer" class="form-control" value="{{$data->footer}}" fdprocessedid="bp6kma">
@@ -142,7 +134,6 @@
     function previewImage() {
         const image = document.querySelector('#image');
         const imgPreview = document.querySelector('.img-preview');
-
         imgPreview.style.display = 'block';
         const oFReader = new FileReader();
         oFReader.readAsDataURL(image.files[0]);
@@ -152,6 +143,5 @@
         }
 
     }
-
 </script>
 @endsection

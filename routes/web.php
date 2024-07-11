@@ -4,17 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\CapchaController;
-use App\Http\Controllers\GeleryController;
-use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\GeneralController;
-use App\Http\Controllers\OpeningController;
-use App\Http\Controllers\SlidderController;
 use App\Http\Controllers\SubmenuController;
 use App\Http\Controllers\MainmenuController;
-use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\PortofolioController;
-use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\CategoryblogController;
 use App\Http\Controllers\CategoryportoController;
 use App\Http\Controllers\IklanController;
@@ -60,8 +53,6 @@ Route::middleware('isLogin')->group(function () {
           
         });
         Route::prefix('konfigurasi/')->group(function () {
-            Route::get('template', [TemplateController::class, 'index'])->name('template.index');
-            Route::patch('template/update', [TemplateController::class, 'update'])->name('template.update');
             Route::get('/general', [GeneralController::class, 'index'])->name('general.index');
             Route::patch('/general/update', [GeneralController::class, 'update'])->name('general.update');
         });
@@ -77,3 +68,7 @@ Route::middleware('isGuest')->group(function () {
 });
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::fallback(function () {
+    return redirect('/');
+});

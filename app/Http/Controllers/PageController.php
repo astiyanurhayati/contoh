@@ -9,9 +9,7 @@ use App\Models\General;
 use App\Models\Submenu;
 use App\Models\Visitor;
 use App\Models\Mainmenu;
-use App\Models\Template;
 use App\Models\Portofolio;
-use App\Models\Testimonial;
 use App\Models\Categoryblog;
 use Illuminate\Http\Request;
 use App\Models\Categoryporto;
@@ -24,7 +22,6 @@ class PageController extends Controller
 
   public function admin()
   {
-    $testimonial = Testimonial::all();
     $galeri = Gelery::all();
     $categoryporto = Categoryporto::all();
     $categoryblog = Categoryblog::all();
@@ -35,22 +32,16 @@ class PageController extends Controller
     $startDate = Carbon::now()->startOfMonth();
     $endDate = Carbon::now()->endOfMonth();
     $visitMonth = Visitor::whereBetween('created_at', [$startDate, $endDate])->get();
-    return view('backend.dahboard', compact(  'visitMonth', 'visitDay', 'visitor','blog', 'categoryporto','categoryblog', 'testimonial', 'galeri', 'portofolio'));
+    return view('backend.dahboard', compact(  'visitMonth', 'visitDay', 'visitor','blog', 'categoryporto','categoryblog', 'galeri', 'portofolio'));
   }
   public function index()
   {
 
     $general = General::first();
-    // $feature = Feature::first();
- 
-    $testimonial = Testimonial::all();
     $portofolio = Portofolio::all();
-    $template = Template::first();
     $subMenu = Submenu::all();
     $mainMenu = Mainmenu::all();
     $categoryporto = Categoryporto::all();
-
-    
     $categoryblog = Categoryblog::all();
 
     $ipUsers = $_SERVER['REMOTE_ADDR'];
@@ -64,21 +55,16 @@ class PageController extends Controller
       ]);
     }
 
-    return view('frontend.index-b', compact('categoryblog', 'categoryporto', 'mainMenu', 'template', 'portofolio', 'testimonial', 'subMenu', 'general'));
+    return view('frontend.index-b', compact('categoryblog', 'categoryporto', 'mainMenu', 'portofolio', 'subMenu', 'general'));
   }  
 
   public function portofolio()
   {
-
-    $template = Template::first();
-
     $categoryporto = Categoryporto::all();
     $portofolios = Portofolio::with('categoryporto')->latest()->paginate(6);
     $mainMenu = Mainmenu::all();
     $categoryblog = Categoryblog::all();
     $general = General::first();
-    $subMenu = Submenu::all();
-
     $ipUsers = $_SERVER['REMOTE_ADDR'];
     $url = url('portofolio');
     $visitor = Visitor::where('tanggal', date('Y-m-d'))->where('ip', $ipUsers)->where('url', $url)->get();
@@ -90,18 +76,15 @@ class PageController extends Controller
       ]);
     }
 
-    return view('frontend.portofolio-b', compact('subMenu', 'general', 'categoryblog','mainMenu', 'portofolios', 'template', 'categoryporto'));
+    return view('frontend.portofolio-b', compact( 'general', 'categoryblog','mainMenu', 'portofolios', 'categoryporto'));
   }
   public function detailPorto($slug)
   {
-    $template = Template::first();
     $data = Portofolio::where('slug', $slug)->first();
     $mainMenu = Mainmenu::all();
     $categoryporto = Categoryporto::all();
     $categoryblog = Categoryblog::all();
     $general = General::first();
-    $subMenu = Submenu::all();
-
     $ipUsers = $_SERVER['REMOTE_ADDR'];
     $url = url('portofolio/' . $data->slug);
     $visitor = Visitor::where('tanggal', date('Y-m-d'))->where('ip', $ipUsers)->where('url', $url)->get();
@@ -114,19 +97,17 @@ class PageController extends Controller
     }
 
 
-    return view('frontend.detail-portofolio-b', compact('subMenu', 'general', 'categoryblog', 'categoryporto','mainMenu', 'data','template'));
+    return view('frontend.detail-portofolio-b', compact( 'general', 'categoryblog', 'categoryporto','mainMenu', 'data','template'));
   }
 
   public function blog()
   {
-    $template = Template::first();
     $categoryblog  = Categoryblog::all();
     $blogs = Blog::with('categoryblog')->paginate(3);
     $blogsb = Blog::latest()->paginate(5);
     $mainMenu = Mainmenu::all();
     $general = General::first();
     $iklanblogs = Iklan::latest()->get();
-    $mainMenu = Mainmenu::all();
     $ipUsers = $_SERVER['REMOTE_ADDR'];
     $url = url('blog');
     $visitor = Visitor::where('tanggal', date('Y-m-d'))->where('ip', $ipUsers)->where('url', $url)->get();
@@ -140,14 +121,12 @@ class PageController extends Controller
     $total = Blog::select('categoryblog_id', DB::raw('count(id) as total'))
     ->groupBy('categoryblog_id')
     ->get();
-    return view('frontend.blog-b', compact('mainMenu', 'total' ,'blogsb','iklanblogs', 'categoryblog', 'general', 'blogs', 'template'));
+    return view('frontend.blog-b', compact('mainMenu', 'total' ,'blogsb','iklanblogs', 'categoryblog', 'general', 'blogs'));
   }
 
   public function detailBlog($slug)
   {
     $data = Blog::where('slug', $slug)->first();
-    $template = Template::first();
-    $galery = Gelery::paginate(9);
     $mainMenu = Mainmenu::all();
     $categoryporto = Categoryporto::all();
     $general = General::first();
@@ -157,7 +136,7 @@ class PageController extends Controller
     $blogsb = Blog::latest()->paginate(5);
     
 
-    return view('frontend.detail-blog-b', compact('subMenu', 'iklanblogs', 'blogsb', 'general', 'categoryblog', 'categoryporto','mainMenu', 'categoryblog', 'template', 'data', 'galery'));
+    return view('frontend.detail-blog-b', compact('subMenu', 'iklanblogs', 'blogsb', 'general', 'categoryblog', 'categoryporto','mainMenu', 'categoryblog', 'data'));
   }
 
   public function blogSearch(Request $request)
@@ -167,15 +146,16 @@ class PageController extends Controller
       ->orWhere('body', 'like', '%' . $searchTerm . '%')
       ->paginate(5);
     $general = General::first();
-    $galery = Gelery::paginate(9);
     $categoryblog = Categoryblog::all();
     $mainMenu = Mainmenu::all();
     $categoryporto = Categoryporto::all();
-    $subMenu = Submenu::all();
-    $template = Template::first();
     $iklanblogs = Iklan::latest()->get();
+    $total = Blog::select('categoryblog_id', DB::raw('count(id) as total'))
+    ->groupBy('categoryblog_id')
+    ->get();
+    $blogsb = Blog::latest()->paginate(5);
 
-    return view('frontend.blog-b', compact('blogs', 'iklanblogs', 'searchTerm', 'general', 'galery', 'categoryblog', 'mainMenu','categoryporto', 'subMenu', 'template'));
+    return view('frontend.blog-b', compact('blogs', 'blogsb', 'iklanblogs', 'searchTerm', 'general',  'categoryblog', 'mainMenu','categoryporto', 'total'));
   }
 
   public function filterBlog($category)
@@ -188,10 +168,9 @@ class PageController extends Controller
     $mainMenu = Mainmenu::all();
     $categoryporto = Categoryporto::all();
     $subMenu = Submenu::all();
-    $template = Template::first();
     $iklanblogs = Iklan::latest()->get();
 
-    return view('frontend.blog', compact('blogs', 'iklanblogs', 'template', 'general', 'galery', 'categoryblog', 'mainMenu','categoryporto', 'subMenu', 'category'));
+    return view('frontend.blog', compact('blogs', 'iklanblogs', 'general', 'galery', 'categoryblog', 'mainMenu','categoryporto','category'));
   }
 
 

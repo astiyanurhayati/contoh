@@ -49,28 +49,7 @@
                                 </div>
                                 <!-- /.info-box -->
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <div class="info-box">
-                                    <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-                                    <div class="info-box-content">
-                                        <span class="info-box-text">Pricing Table</span>
-                                        <span class="info-box-number">{{count($visitor->where('url', url('/price')))}}</span>
-                                    </div>
-                                    <!-- /.info-box-content -->
-                                </div>
-                                <!-- /.info-box -->
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <div class="info-box">
-                                    <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-                                    <div class="info-box-content">
-                                        <span class="info-box-text">Recipe Grid</span>
-                                        <span class="info-box-number">{{count($visitor->where('url', url('/recipe')))}}</span>
-                                    </div>
-                                    <!-- /.info-box-content -->
-                                </div>
-                                <!-- /.info-box -->
-                            </div>
+                          
                             <div class="col-md-3 col-sm-6 col-12">
                                 <div class="info-box">
                                     <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
@@ -93,17 +72,7 @@
                                 </div>
                                 <!-- /.info-box -->
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <div class="info-box">
-                                    <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-                                    <div class="info-box-content">
-                                        <span class="info-box-text">Shop</span>
-                                        <span class="info-box-number">{{count($visitor->where('url', url('/shop')))}}</span>
-                                    </div>
-                                    <!-- /.info-box-content -->
-                                </div>
-                                <!-- /.info-box -->
-                            </div>
+                        
                            
 
                         </div>
@@ -133,28 +102,8 @@
                                 </div>
                                 <!-- /.info-box -->
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <div class="info-box">
-                                    <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-                                    <div class="info-box-content">
-                                        <span class="info-box-text">Pricing Table</span>
-                                        <span class="info-box-number">{{count($visitDay->where('url', url('/price')))}}</span>
-                                    </div>
-                                    <!-- /.info-box-content -->
-                                </div>
-                                <!-- /.info-box -->
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <div class="info-box">
-                                    <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-                                    <div class="info-box-content">
-                                        <span class="info-box-text">Recipe Grid</span>
-                                        <span class="info-box-number">{{count($visitDay->where('url', url('/recipe')))}}</span>
-                                    </div>
-                                    <!-- /.info-box-content -->
-                                </div>
-                                <!-- /.info-box -->
-                            </div>
+                            
+                           
                             <div class="col-md-3 col-sm-6 col-12">
                                 <div class="info-box">
                                     <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
@@ -177,19 +126,7 @@
                                 </div>
                                 <!-- /.info-box -->
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <div class="info-box">
-                                    <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-                                    <div class="info-box-content">
-                                        <span class="info-box-text">Shop</span>
-                                        <span class="info-box-number">{{count($visitDay->where('url', url('/shop')))}}</span>
-                                    </div>
-                                    <!-- /.info-box-content -->
-                                </div>
-                                <!-- /.info-box -->
-                            </div>
-                          
-
+                           
                         </div>
                     </div>
                     <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel" aria-labelledby="custom-tabs-one-messages-tab">
@@ -217,28 +154,8 @@
                                 </div>
                                 <!-- /.info-box -->
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <div class="info-box">
-                                    <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-                                    <div class="info-box-content">
-                                        <span class="info-box-text">Pricing Table</span>
-                                        <span class="info-box-number">{{count($visitMonth->where('url', url('/price')))}}</span>
-                                    </div>
-                                    <!-- /.info-box-content -->
-                                </div>
-                                <!-- /.info-box -->
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <div class="info-box">
-                                    <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-                                    <div class="info-box-content">
-                                        <span class="info-box-text">Recipe Grid</span>
-                                        <span class="info-box-number">{{count($visitMonth->where('url', url('/recipe')))}}</span>
-                                    </div>
-                                    <!-- /.info-box-content -->
-                                </div>
-                                <!-- /.info-box -->
-                            </div>
+                            
+                            
                             <div class="col-md-3 col-sm-6 col-12">
                                 <div class="info-box">
                                     <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
@@ -261,28 +178,7 @@
                                 </div>
                                 <!-- /.info-box -->
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <div class="info-box">
-                                    <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-                                    <div class="info-box-content">
-                                        <span class="info-box-text">Shop</span>
-                                        <span class="info-box-number">{{count($visitMonth->where('url', url('/shop')))}}</span>
-                                    </div>
-                                    <!-- /.info-box-content -->
-                                </div>
-                                <!-- /.info-box -->
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <div class="info-box">
-                                    <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-                                    <div class="info-box-content">
-                                        <span class="info-box-text">Contact</span>
-                                        <span class="info-box-number">{{count($visitMonth->where('url', url('/contact')))}}</span>
-                                    </div>
-                                    <!-- /.info-box-content -->
-                                </div>
-                                <!-- /.info-box -->
-                            </div>
+                            
 
                         </div>
                     </div>
@@ -297,10 +193,9 @@
 
 
 
-<h4> <b> Data </b></h4>
+<h4><b> Data </b></h4>
 <div class="row">
  
-    
     <!-- ./col -->
     <div class="col-lg-3 col-6">
         <!-- small card -->
@@ -318,16 +213,7 @@
             </a>
         </div>
     </div>
-    <!-- ./col -->
-</div>
-
-
-
-<div class="row">
-  
-    <!-- ./col -->
     <div class="col-lg-3 col-6">
-        <!-- small card -->
         <div class="small-box bg-success">
             <div class="inner">
                 <h3>{{count($portofolio)}}</sup></h3>
@@ -342,34 +228,14 @@
             </a>
         </div>
     </div>
-  
-    
 </div>
+
+
+
+
 
 <h4><b>Items</b></h4>
 <div class="row">
-    
-    <div class="col-md-3 col-sm-6 col-12">
-        <div class="info-box">
-            <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Testimonial</span>
-                <span class="info-box-number">{{count($testimonial)}}</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-12">
-        <div class="info-box">
-            <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Galeri</span>
-                <span class="info-box-number">{{count($galeri)}}</span>
-            </div>
-        </div>
-    </div>
-
    
     <div class="col-md-3 col-sm-6 col-12">
         <div class="info-box">
@@ -377,17 +243,6 @@
 
             <div class="info-box-content">
                 <span class="info-box-text">Kategori Portofolio</span>
-                <span class="info-box-number">{{count($categoryporto)}}</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-3 col-sm-6 col-12">
-        <div class="info-box">
-            <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Kategori Produk / Shop</span>
                 <span class="info-box-number">{{count($categoryporto)}}</span>
             </div>
         </div>
