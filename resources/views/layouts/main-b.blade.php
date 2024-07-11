@@ -63,6 +63,23 @@
       transform: scale(1.1);
     }
 
+    .active-line{
+    position: absolute;
+    content: "";
+    background: #000000;
+    width: 100%;
+    height: 4px;
+    bottom: -4px;
+    left: 0;
+    opacity: 0;
+    z-index: 9;
+    transform: scaleX(0);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
   </style>
 </head>
 
@@ -83,9 +100,9 @@
               <div class="main-menu d-none d-lg-block">
                 <nav>
                   <ul id="navigation" >
-                    <li class="active"><a style="font-size: 1.05em" href="{{url('/')}}">{{$mainMenu[0]->name}}</a></li>
-                    <li class=" {{ Request::is('/portofolio') ? 'active' : '' }}"><a style="font-size: 1.05em" href="{{route('portofolio')}}">{{$mainMenu[2]->name}}</a></li>
-                    <li class="{{ Request::is('blog') ? 'active' : '' }}"><a style="font-size: 1.05em" href="{{route('blog')}}">{{$mainMenu[3]->name}}</a></li>
+                    <li><a style="font-size: 1.05em" class="{{ Request::is('/') ? 'active' : '' }}" href="{{url('/')}}">{{$mainMenu[0]->name}}</a></li>
+                    <li><a style="font-size: 1.05em" class=" {{ Request::is('portofolio') ? 'active' : '' }}" href="{{route('portofolio')}}">{{$mainMenu[2]->name}}</a></li>
+                    <li><a style="font-size: 1.05em" class="{{ Request::is('blog') ? 'active' : '' }}" href="{{route('blog')}}">{{$mainMenu[3]->name}}</a></li>
                   </ul>
                 </nav>
               </div>
