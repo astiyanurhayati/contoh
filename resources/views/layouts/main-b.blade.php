@@ -78,22 +78,7 @@
       transform: scale(1.1);
     }
 
-    .active-line{
-    position: absolute;
-    content: "";
-    background: #000000;
-    width: 100%;
-    height: 4px;
-    bottom: -4px;
-    left: 0;
-    opacity: 0;
-    z-index: 9;
-    transform: scaleX(0);
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
-}
+  
 
   </style>
 </head>
@@ -106,7 +91,7 @@
           <div class="row align-items-center no-gutters">
             <div class="col-xl-2 col-lg-2">
               <div class="logo-img">
-                <a href="index.html">
+                <a href="/">
                   <img src="{{asset('asset-b/img/utils/buatinaja.png')}}" alt="Buatinaja Logo" width="165px" style="margin-left: 60px">
                 </a>
               </div>

@@ -11,6 +11,7 @@
   -ms-flex-pack: start;
   justify-content: start;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
@@ -676,12 +677,24 @@ h3 {
 }
 @media (max-width: 767px) {
   .header-area .main-header-area {
-    background: #0f88f5;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+    
+    background: rgba(0, 0, 0, 0.786);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header-area .main-header-area {
-    background: #0f88f5;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+    
+    background: rgba(0, 0, 0, 0.786);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
   }
 }
 .header-area .main-header-area .logo-img {
@@ -709,14 +722,16 @@ h3 {
 }
 @media (max-width: 767px) {
   .header-area .main-header-area .logo-img img {
-    width: 40px;
-    height: 40px;
+    height: 38px;
+    width: auto;
+    margin: 9px 7px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header-area .main-header-area .logo-img img {
-    width: 40px;
-    height: 40px;
+    height: 38px;
+      width: auto;
+      margin: 9px 7px;
   }
 }
 .header-area .main-header-area .main-menu {
@@ -866,12 +881,20 @@ h3 {
 }
 @media (max-width: 767px) {
   .header-area .main-header-area.sticky {
-    background: #0f88f5;
+    background: rgba(0, 0, 0, 0.786);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header-area .main-header-area.sticky {
-    background: #0f88f5;
+    background: rgba(0, 0, 0, 0.786);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   }
 }
 .header-area .main-header-area.sticky .main-menu {
