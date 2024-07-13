@@ -34,6 +34,21 @@
   <meta name="searh engine" content="{{$general->searchengine}}">
   <meta name="author" content="{{$general->author}}">
   <meta name="website" content="{{$general->website}}">
+  <link rel="canonical" href="https://www.buatinaja.com">
+
+  <meta property="og:title" content="buatinaja - Professional Website Development and UI/UX Design Services">
+  <meta property="og:description" content="buatinaja offers professional website development, UI/UX design services, and specialized websites for SMEs (UMKM). Enhance your online presence with our expert solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.buatinaja.com">
+  <meta property="og:image" content="https://www.buatinaja.com/images/logo.png">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Indonesian">
+  <link rel="alternate" href="https://www.buatinaja.com" hreflang="en">
+
+
+
+
+
   @endif
 
 
