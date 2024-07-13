@@ -36,7 +36,7 @@
           @foreach ($blogs as $blog )
           <article class="blog_item">
             <div class="blog_item_img">
-              <img class="card-img rounded-0" src="{{$blog->gambar}}" alt="{{$blog->judul}}">
+              <img class="card-img rounded-0" src="{{asset('blogimg/'.$blog->gambar)}}" alt="{{$blog->judul}}">
               <a href="#" class="blog_item_date">
                 <h3>{{$blog->created_at->format('d')}}</h3>
                 <p>{{$blog->created_at->format('F')}}</p>
@@ -49,7 +49,7 @@
               </a>
               <p>{{$blog->excerpt}}</p>
               <ul class="blog-info-link">
-                <li><a href="#"><i class="fa fa-user"></i>categir</a></li>
+                <li><a href="#"><i class="fa fa-user"></i>{{$blog->categoryblog->name}}</a></li>
               </ul>
             </div>
           </article>
@@ -83,7 +83,7 @@
 
               @foreach ($categoryblog as $cate )
               <li>
-                <a href="#" class="d-flex">
+                <a href="{{route('filter.blog', $cate->slug)}}" class="d-flex">
                   <p>{{$cate->name}}</p>
                   <p>({{ $total->where('categoryblog_id',
                                     $cate->id)->first()->total ?? 0 }})</p>
@@ -99,7 +99,7 @@
             
             @foreach ($blogsb as $b )
             <div class="media post_item">
-              <img src="{{asset($b->gambar)}}" alt="post" width="100px">
+              <img src="{{asset('blogimg/'.$b->gambar)}}" alt="post" width="100px">
               <div class="media-body">
                 <a href="{{route('detail.blog', $b->slug)}}">
                   <h3>{{Str::limit($b->judul, 22)}}</h3>

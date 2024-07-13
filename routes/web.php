@@ -10,6 +10,7 @@ use App\Http\Controllers\MainmenuController;
 use App\Http\Controllers\PortofolioController;
 use App\Http\Controllers\CategoryblogController;
 use App\Http\Controllers\CategoryportoController;
+use App\Http\Controllers\CkeditorController;
 use App\Http\Controllers\IklanController;
 
 
@@ -44,7 +45,8 @@ Route::middleware('isLogin')->group(function () {
             Route::get('search/category-blog', [CategoryblogController::class, 'search'])->name('search.categroyblog');
             Route::resource('/iklan', IklanController::class);
         });
-       
+        Route::post('recipe-cek', [CkeditorController::class, 'ckeditorUpload'])->name('ckeditor');
+
         Route::resource('blog', BlogController::class);
         Route::get('search/blog', [BlogController::class, 'search'])->name('search.blog');
         Route::prefix('manajemen-menu/')->group(function () {

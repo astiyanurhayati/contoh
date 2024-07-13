@@ -20,27 +20,20 @@ class GeneralController extends Controller
     }
     public function update(Request $request)
     {
-        $request->validate([
-            'logo1' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'logo2' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
         $data = General::first();
-
-        // Handle logo1 upload and update
+        
         if ($request->hasFile('logo1')) {
             $logo1 = $request->file('logo1');
-            $logo1Path = $logo1->store('generalimg', 'public'); // Store in the public disk
-            $data->logo1 = $logo1Path;
+            $logo1Name = time() . '_logo1.' . $logo1->getClientOriginalExtension();
+            $logo1->move(public_path('uploads'), $logo1Name);
+            $data->logo1 = 'uploads/' . $logo1Name;
         }
-
-        // Handle logo2 upload and update
         if ($request->hasFile('logo2')) {
             $logo2 = $request->file('logo2');
-            $logo2Path = $logo2->store('generalimg', 'public'); // Store in the public disk
-            $data->logo2 = $logo2Path;
+            $logo2Name = time() . '_logo2.' . $logo2->getClientOriginalExtension();
+            $logo2->move(public_path('uploads'), $logo2Name);
+            $data->logo2 = 'uploads/' . $logo2Name;
         }
-
-        // Update other fields
         $data->update([
             'fb' => $request->fb,
             'ig' => $request->ig,
@@ -55,7 +48,6 @@ class GeneralController extends Controller
             'title' => $request->title,
             'website' => $request->website
         ]);
-
         alert();
         return redirect()->route('general.index');
     }

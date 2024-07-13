@@ -12,9 +12,7 @@ class BlogController extends Controller
    public function search(Request $request){
     
     $searchQuery = $request->input('query');
-    // return $searchQuery;
     $blogs = Blog::where('judul', 'like', "%$searchQuery%")
-
         ->orWhere('body', 'like', "%$searchQuery%")
         ->orWhere('judul', 'like', "%$searchQuery%")
         ->orWhere('label', 'like', "%$searchQuery%")

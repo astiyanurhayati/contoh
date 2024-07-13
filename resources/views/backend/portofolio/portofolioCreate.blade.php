@@ -57,7 +57,7 @@
     </form>
 </div>
 
-{{-- <script>
+<script>
     var editorClass = ['desk'];
     editorClass.forEach(e => {
         CKEDITOR.replace(e, {
@@ -66,7 +66,7 @@
         })
     });
 
-</script> --}}
+</script>
 <script>
     function previewImage() {
 

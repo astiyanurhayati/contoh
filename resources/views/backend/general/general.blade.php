@@ -79,7 +79,7 @@
                 <label for="">Logo 1</label>
                 <div class="input-group">
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input @error('image') is-invalid @enderror" id="image" name="logo1" onchange="previewImage()">
+                        <input type="file" class="custom-file-input @error('image') is-invalid @enderror" id="image1" name="logo1" onchange="previewImage('image1', 'preview1')">
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                     </div>
                     <div class="input-group-append">
@@ -88,11 +88,11 @@
                 </div>
                 @if($data->logo1)
                 <div style="width: 100px">
-                    <img src="{{asset('generalimg/'.$data->logo1)}}" class="img-preview img-fluid d-blok">
+                    <img src="{{asset($data->logo1)}}" id="preview1" class="img-preview img-fluid d-blok">
                 </div>
                 @else
                 <div style="width: 150px">
-                    <img class="img-preview img-fluid">
+                    <img id="preview1" class="img-preview img-fluid">
                 </div>
                 @endif
             </div>
@@ -100,7 +100,7 @@
                 <label for="">Logo 2</label>
                 <div class="input-group">
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input @error('image') is-invalid @enderror" id="image" name="logo2" onchange="previewImage()">
+                        <input type="file" class="custom-file-input @error('image') is-invalid @enderror" id="image2" name="logo2" onchange="previewImage('image2', 'preview2')">
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                     </div>
                     <div class="input-group-append">
@@ -109,14 +109,15 @@
                 </div>
                 @if($data->logo2)
                 <div style="width: 100px">
-                    <img src="{{asset('generalimg/'.$data->logo2)}}" class="img-preview img-fluid d-blok">
+                    <img src="{{asset($data->logo2)}}" id="preview2" class="img-preview img-fluid d-blok">
                 </div>
                 @else
                 <div style="width: 150px">
-                    <img class="img-preview img-fluid">
+                    <img id="preview2" class="img-preview img-fluid">
                 </div>
                 @endif
             </div>
+            
            
         </div>
 
@@ -131,9 +132,9 @@
 
 
 <script>
-    function previewImage() {
-        const image = document.querySelector('#image');
-        const imgPreview = document.querySelector('.img-preview');
+    function previewImage(imageId, previewId) {
+        const image = document.getElementById(imageId);
+        const imgPreview = document.getElementById(previewId);
         imgPreview.style.display = 'block';
         const oFReader = new FileReader();
         oFReader.readAsDataURL(image.files[0]);
@@ -141,7 +142,6 @@
         oFReader.onload = function(oFREvent) {
             imgPreview.src = oFREvent.target.result;
         }
-
     }
 </script>
 @endsection

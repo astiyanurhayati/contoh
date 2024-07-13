@@ -7,8 +7,9 @@
       <div class="col-lg-8 posts-list">
         <div class="single-post">
           <div class="feature-img">
-            <img class="img-fluid" src="{{$data->gambar}}" alt="">
+            <img class="img-fluid" src="{{asset('blogimg/'.$data->gambar)}}" alt="">
           </div>
+          Kategori: {{$data->categoryblog->name}}
           <div class="blog_details">
             {!! $data->body !!}
           </div>
@@ -34,7 +35,7 @@
             <h3 class="widget_title">Recent Post</h3>
             @foreach ($blogsb as $b )
             <div class="media post_item">
-              <img src="{{asset($b->gambar)}}" alt="post" width="100px">
+              <img src="{{asset('blogimg/'.$b->gambar)}}" alt="post" width="100px">
               <div class="media-body">
                 <a href="{{route('detail.blog', $b->slug)}}">
                   <h3>{{Str::limit($b->judul, 22)}}</h3>

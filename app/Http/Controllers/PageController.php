@@ -22,7 +22,7 @@ class PageController extends Controller
 
   public function admin()
   {
-    $galeri = Gelery::all();
+
     $categoryporto = Categoryporto::all();
     $categoryblog = Categoryblog::all();
     $portofolio = Portofolio::all();
@@ -32,7 +32,7 @@ class PageController extends Controller
     $startDate = Carbon::now()->startOfMonth();
     $endDate = Carbon::now()->endOfMonth();
     $visitMonth = Visitor::whereBetween('created_at', [$startDate, $endDate])->get();
-    return view('backend.dahboard', compact(  'visitMonth', 'visitDay', 'visitor','blog', 'categoryporto','categoryblog', 'galeri', 'portofolio'));
+    return view('backend.dahboard', compact(  'visitMonth', 'visitDay', 'visitor','blog', 'categoryporto','categoryblog', 'portofolio'));
   }
   public function index()
   {
@@ -103,7 +103,9 @@ class PageController extends Controller
   public function blog()
   {
     $categoryblog  = Categoryblog::all();
+   
     $blogs = Blog::with('categoryblog')->paginate(3);
+
     $blogsb = Blog::latest()->paginate(5);
     $mainMenu = Mainmenu::all();
     $general = General::first();
@@ -163,18 +165,19 @@ class PageController extends Controller
     $category = Categoryblog::with('blogs')->where('slug', $category)->first();
     $blogs = $category->blogs()->latest()->paginate(5);
     $general = General::first();
-    $galery = Gelery::paginate(9);
+
     $categoryblog = Categoryblog::all();
     $mainMenu = Mainmenu::all();
     $categoryporto = Categoryporto::all();
     $subMenu = Submenu::all();
     $iklanblogs = Iklan::latest()->get();
+    $total = Blog::select('categoryblog_id', DB::raw('count(id) as total'))
+    ->groupBy('categoryblog_id')
+    ->get();
 
-    return view('frontend.blog', compact('blogs', 'iklanblogs', 'general', 'galery', 'categoryblog', 'mainMenu','categoryporto','category'));
+    return view('frontend.blog-b', compact('blogs', 'total', 'iklanblogs', 'general', 'categoryblog', 'mainMenu','categoryporto','category'));
   }
 
-
- 
 
   function sitemap()
   {

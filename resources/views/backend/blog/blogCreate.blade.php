@@ -51,7 +51,7 @@
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-            
+
             <div class="col-md-12">
                 <label>Body</label>
                 <textarea name="body" id="body" class="@error('body') is-invalid @enderror">{{old('body')}}</textarea>
@@ -59,8 +59,6 @@
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-            
-                
             <div class="form-group col-md-6 mt-3">
                 <label>Label</label>
                 <textarea name="label" class="form-control @error('label') is-invalid @enderror" id="" cols="2" rows="2">{{old('label')}}</textarea>
@@ -105,7 +103,7 @@
     </form>
 </div>
 
-{{-- <script>
+<script>
     var editorClass = ['body'];
     editorClass.forEach(e => {
       CKEDITOR.replace(e, {
@@ -114,7 +112,7 @@
       })
     });
     </script>
-<script> --}}
+<script>
     function previewImage() {
 
         var preview = document.querySelector('#image-preview');
